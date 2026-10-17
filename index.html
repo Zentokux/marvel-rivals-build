@@ -4,52 +4,83 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cacería Sangrienta Builds</title>
-<meta name="description" content="Marvel Rivals: builds de Cacería sangrienta (Blood Hunt) para Pesadilla 300, los 6 héroes, con fuentes y fechas.">
+<meta name="description" content="Marvel Rivals: builds exactas de Cacería sangrienta (Blood Hunt) para Pesadilla 300 en solitario: rasgos punto por punto y equipo pieza por pieza.">
 <style>
-:root { --bg: #0a0708; --panel: #150e10; --borde: #3a1e24; --txt: #f1e9ea; --suave: #a8959a; --rojo: #e11d2e; --oro: #f5b942; --ok: #22c55e; }
+:root { --bg: #0a0708; --panel: #150e10; --panel2: #1d1215; --borde: #3a1e24; --txt: #f1e9ea; --suave: #a8959a; --rojo: #e11d2e; --oro: #f5b942;
+  --gS: #f5b942; --gA: #c084fc; --gB: #60a5fa; --gC: #4ade80; --gD: #a3a3a3; --ok: #22c55e; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body { background: radial-gradient(ellipse at top, #3a0b12 0%, var(--bg) 55%); color: var(--txt); font-family: -apple-system, "Segoe UI", Roboto, sans-serif; min-height: 100vh; }
 a { color: var(--oro); }
-header { text-align: center; padding: 2.4rem 1rem 1.2rem; }
-header .sub { color: var(--oro); letter-spacing: .25em; font-size: .8rem; font-weight: 700; text-transform: uppercase; }
-h1 { font-size: clamp(2.1rem, 6vw, 3.6rem); color: var(--rojo); text-shadow: 0 0 30px rgba(225, 29, 46, .5); letter-spacing: .03em; margin: .3rem 0; }
-header p { color: var(--suave); max-width: 720px; margin: 0 auto; }
-.badges { display: flex; gap: .5rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem; }
-.badge { border: 1px solid var(--borde); background: #1d1215; border-radius: 99px; padding: .3rem .8rem; font-size: .82rem; color: var(--suave); }
+header { text-align: center; padding: 2.2rem 1rem 1rem; }
+header .sub { color: var(--oro); letter-spacing: .25em; font-size: .78rem; font-weight: 700; text-transform: uppercase; }
+h1 { font-size: clamp(2rem, 6vw, 3.4rem); color: var(--rojo); text-shadow: 0 0 30px rgba(225, 29, 46, .5); margin: .3rem 0; }
+header p { color: var(--suave); max-width: 760px; margin: 0 auto; }
+.badges { display: flex; gap: .5rem; justify-content: center; flex-wrap: wrap; margin-top: .9rem; }
+.badge { border: 1px solid var(--borde); background: var(--panel2); border-radius: 99px; padding: .28rem .8rem; font-size: .8rem; color: var(--suave); }
 .badge b { color: var(--txt); }
 .badge.oro { border-color: var(--oro); color: var(--oro); }
-main { max-width: 1150px; margin: 0 auto; padding: 0 1rem 3rem; }
-h2 { color: var(--rojo); font-size: 1.4rem; margin: 2.2rem 0 1rem; text-align: center; }
-.galeria { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .8rem; }
-.carta { position: relative; border-radius: 14px; overflow: hidden; border: 2px solid var(--borde); background: #1d1215; text-decoration: none; color: var(--txt); transition: transform .2s, border-color .2s; }
+main { max-width: 1180px; margin: 0 auto; padding: 0 1rem 3rem; }
+h2 { color: var(--rojo); font-size: 1.35rem; margin: 2rem 0 .9rem; text-align: center; }
+.galeria { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: .7rem; }
+.carta { position: relative; border-radius: 14px; overflow: hidden; border: 2px solid var(--borde); background: var(--panel2); text-decoration: none; color: var(--txt); transition: transform .2s, border-color .2s; }
 .carta:hover { transform: translateY(-4px); border-color: var(--c); }
 .carta img { width: 100%; aspect-ratio: 181 / 256; object-fit: cover; display: block; }
-.carta .pie { position: absolute; inset: auto 0 0 0; padding: .6rem .5rem .5rem; background: linear-gradient(transparent, rgba(0, 0, 0, .92)); }
-.carta .nm { font-weight: 800; font-size: .98rem; }
-.carta .rol { font-size: .72rem; color: var(--c); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
-.panel { background: var(--panel); border: 1px solid var(--borde); border-radius: 14px; padding: 1.1rem 1.2rem; }
-.datos { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: .7rem; }
-.dato { background: #1d1215; border-radius: 10px; padding: .7rem .8rem; border-left: 3px solid var(--rojo); }
-.dato b { display: block; color: var(--oro); font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; margin-bottom: .2rem; }
-table { width: 100%; border-collapse: collapse; font-size: .9rem; }
-th, td { padding: .5rem .55rem; border-bottom: 1px solid #2a171b; text-align: left; vertical-align: top; }
-th { color: var(--oro); font-weight: 600; font-size: .82rem; text-transform: uppercase; letter-spacing: .05em; }
-.heroe { display: grid; grid-template-columns: 200px 1fr; gap: 1.2rem; background: var(--panel); border: 1px solid var(--borde); border-left: 6px solid var(--c); border-radius: 14px; padding: 1.1rem; margin-bottom: 1.2rem; scroll-margin-top: 1rem; }
-.heroe .foto img { width: 100%; border-radius: 12px; display: block; }
-.heroe h3 { font-size: 1.5rem; }
-.heroe .rol { color: var(--c); font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; }
-.heroe .resumen { color: var(--suave); margin: .3rem 0 .8rem; }
-.etq { display: inline-block; font-size: .72rem; padding: .1rem .5rem; border-radius: 99px; border: 1px solid var(--c); color: var(--c); margin-right: .3rem; font-weight: 700; }
-.op { font-weight: 700; color: #fff; }
-.videos { margin-top: .7rem; font-size: .82rem; color: var(--suave); }
-.nota { color: var(--suave); font-size: .82rem; margin-top: .6rem; }
-.aviso { border-left-color: var(--oro); }
-footer { max-width: 1150px; margin: 0 auto; padding: 1.5rem 1rem 3rem; color: var(--suave); font-size: .8rem; line-height: 1.6; }
+.carta .pie { position: absolute; inset: auto 0 0 0; padding: .55rem .5rem .45rem; background: linear-gradient(transparent, rgba(0, 0, 0, .92)); }
+.carta .nm { font-weight: 800; font-size: .95rem; }
+.carta .rol { font-size: .7rem; color: var(--c); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+.panel { background: var(--panel); border: 1px solid var(--borde); border-radius: 14px; padding: 1rem 1.1rem; }
+.datos { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: .6rem; }
+.dato { background: var(--panel2); border-radius: 10px; padding: .65rem .8rem; border-left: 3px solid var(--rojo); font-size: .9rem; }
+.dato b { display: block; color: var(--oro); font-size: .74rem; text-transform: uppercase; letter-spacing: .06em; margin-bottom: .2rem; }
+table { width: 100%; border-collapse: collapse; font-size: .86rem; }
+th, td { padding: .42rem .5rem; border-bottom: 1px solid #2a171b; text-align: left; vertical-align: top; }
+th { color: var(--oro); font-weight: 600; font-size: .76rem; text-transform: uppercase; letter-spacing: .05em; }
+.heroe { background: var(--panel); border: 1px solid var(--borde); border-top: 5px solid var(--c); border-radius: 14px; margin-bottom: 1.6rem; scroll-margin-top: 1rem; overflow: hidden; }
+.cab { display: flex; gap: 1rem; align-items: center; padding: 1rem 1.1rem; background: linear-gradient(90deg, rgba(0,0,0,.35), transparent); }
+.cab img { width: 92px; border-radius: 10px; }
+.cab .rol { color: var(--c); font-weight: 700; font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; }
+.cab h3 { font-size: 1.6rem; }
+.tabs { display: flex; gap: .4rem; padding: 0 1.1rem; flex-wrap: wrap; }
+.tabs button { background: var(--panel2); color: var(--txt); border: 1px solid var(--borde); border-bottom: 0; border-radius: 10px 10px 0 0; padding: .5rem .9rem; cursor: pointer; font-size: .85rem; }
+.tabs button.on { background: #24161a; border-color: var(--c); color: #fff; font-weight: 700; }
+.build { display: none; padding: 1rem 1.1rem 1.2rem; border-top: 1px solid var(--c); background: #120b0d; }
+.build.on { display: block; }
+.prueba { display: flex; gap: .4rem; flex-wrap: wrap; margin-bottom: .8rem; }
+.p { font-size: .76rem; padding: .18rem .6rem; border-radius: 99px; border: 1px solid var(--borde); color: var(--suave); }
+.p.ok { color: var(--ok); border-color: var(--ok); }
+.p.medio { color: var(--oro); border-color: var(--oro); }
+h4 { color: var(--oro); font-size: .92rem; margin: 1.1rem 0 .5rem; text-transform: uppercase; letter-spacing: .06em; }
+.arbol { display: grid; grid-template-columns: repeat(auto-fill, minmax(165px, 1fr)); gap: .4rem; }
+.nodo { background: var(--panel2); border: 1px solid var(--borde); border-radius: 8px; padding: .4rem .5rem; font-size: .8rem; }
+.nodo .n { color: var(--suave); font-size: .7rem; }
+.nodo .t { font-weight: 600; }
+.nodo .pts { float: right; font-weight: 800; }
+.nodo.max { border-color: var(--c); }
+.nodo.max .pts { color: var(--c); }
+.nodo.elec { border-style: dashed; border-color: var(--oro); }
+.nodo.elec .t b { color: var(--oro); }
+.barra { height: 4px; background: #2a171b; border-radius: 9px; margin-top: .3rem; overflow: hidden; }
+.barra i { display: block; height: 100%; background: var(--c); }
+.total { margin-top: .5rem; font-size: .85rem; color: var(--suave); }
+.total b { color: var(--txt); }
+.equipo { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: .6rem; }
+.pieza { background: var(--panel2); border: 1px solid var(--borde); border-radius: 10px; padding: .7rem .8rem; }
+.pieza .ranura { color: var(--suave); font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; }
+.pieza .pn { font-weight: 800; color: var(--gS); font-size: 1rem; }
+.pieza .base { color: var(--suave); font-size: .8rem; margin: .2rem 0 .4rem; }
+.linea { display: flex; gap: .45rem; align-items: baseline; font-size: .84rem; padding: .16rem 0; }
+.g { flex: none; width: 1.35rem; text-align: center; font-weight: 900; border-radius: 4px; font-size: .74rem; padding: .05rem 0; color: #111; }
+.gS { background: var(--gS); } .gA { background: var(--gA); } .gB { background: var(--gB); } .gC { background: var(--gC); } .gD { background: var(--gD); }
+.refinar { font-size: .68rem; color: var(--rojo); border: 1px solid var(--rojo); border-radius: 99px; padding: 0 .4rem; margin-left: auto; white-space: nowrap; }
+.nota { color: var(--suave); font-size: .82rem; margin-top: .55rem; line-height: 1.5; }
+.nota b { color: var(--txt); }
+.fuera { color: var(--suave); font-size: .82rem; padding: .7rem 1.1rem 1rem; border-top: 1px dashed var(--borde); }
+footer { max-width: 1180px; margin: 0 auto; padding: 1.5rem 1rem 3rem; color: var(--suave); font-size: .8rem; line-height: 1.6; }
 @media (max-width: 720px) {
-  .heroe { grid-template-columns: 1fr; }
-  .heroe .foto { max-width: 170px; }
-  th, td { padding: .45rem .35rem; font-size: .84rem; }
+  .cab img { width: 70px; }
+  .arbol { grid-template-columns: repeat(2, 1fr); }
+  th, td { padding: .38rem .3rem; font-size: .8rem; }
 }
 </style>
 </head>
@@ -57,10 +88,11 @@ footer { max-width: 1150px; margin: 0 auto; padding: 1.5rem 1rem 3rem; color: va
 <header>
   <div class="sub">Marvel Rivals · Temporada 10.5</div>
   <h1>Cacería Sangrienta</h1>
-  <p>Builds para llegar a <b>Pesadilla piso 300</b> con cada uno de los 6 héroes del modo (Blood Hunt). Solo builds probadas en el piso 300.</p>
+  <p>Builds <b>exactas</b> para Pesadilla 300 <b>en solitario</b>: cada punto del árbol de rasgos y cada pieza de equipo con sus efectos. Datos leídos de la pantalla de los vídeos de jugadores que lo pasan solos.</p>
   <div class="badges">
     <span class="badge oro">Actualizado 16-oct-2026</span>
     <span class="badge">Máximo: <b>Pesadilla 300</b></span>
+    <span class="badge">Puntos de rasgo a nv 60: <b>62</b></span>
     <span class="badge">Fin probable: <b>13-nov</b></span>
   </div>
 </header>
@@ -69,101 +101,206 @@ footer { max-width: 1150px; margin: 0 auto; padding: 1.5rem 1rem 3rem; color: va
   <h2>Elige tu héroe</h2>
   <div class="galeria" id="galeria"></div>
 
-  <h2>El modo</h2>
+  <h2>Cómo leer cada build</h2>
   <div class="datos">
-    <div class="dato"><b>Qué es</b>PvE cooperativo de 1 a 4 jugadores contra vampiros y Drácula.</div>
-    <div class="dato"><b>Máximo nivel</b>Pesadilla piso 300: 4 oleadas + jefe por piso; 2 jefes en los pisos 20, 40, 80, 100…300.</div>
-    <div class="dato"><b>Requisito</b>Desde el piso 71: héroe nivel 60 y equipo nivel 60.</div>
-    <div class="dato"><b>Recompensa</b>Pasar el piso 260 con cada héroe: <b style="display:inline;color:var(--txt)">100 Units</b> (una vez por héroe, 600 en total).</div>
-    <div class="dato aviso"><b>Hasta cuándo</b>Probablemente hasta el 13-nov-2026 (fin de la 10.5). Sin anuncio oficial: mira el contador del juego.</div>
-    <div class="dato"><b>Cambios recientes</b>Desde el 23-jul no cambió nada del modo; el 15-oct se arregló Aqua Burst de Jeff con el rasgo Reservoir.</div>
-  </div>
-
-  <h2>Reglas para todos</h2>
-  <div class="panel">
-    <table>
-      <tr><th>Pieza</th><th>Qué poner</th></tr>
-      <tr><td>Arma y accesorio</td><td class="op">Total Damage Bonus (se refina en la ranura 1 del arma y la 4 del accesorio; el exclusivo no puede tenerlo)</td></tr>
-      <tr><td>Stats ofensivas</td><td>Crítico <b>o</b> precisión, según lo que traiga tu equipo</td></tr>
-      <tr><td>Armadura</td><td>Armor value, Health %, Health, Health restored, Healing Rune CD</td></tr>
-      <tr><td>Orden de mejora</td><td>Primero el <b>arma</b></td></tr>
-      <tr><td>Cartas Arcana</td><td class="op">Indomitable + Iron Body (salvo Squirrel Girl)</td></tr>
-      <tr><td>Equipo sobrante</td><td>Reciclar a Uru Shards y forjar la ranura que falte</td></tr>
-    </table>
+    <div class="dato"><b>Árbol general</b>18 rasgos (máx. 5 puntos) + 3 elecciones (1 punto; eliges uno de los dos). Están numerados de arriba abajo, igual en todos los héroes.</div>
+    <div class="dato"><b>Ramas de habilidad</b>Al lado de algunos rasgos generales hay dos ramas (una por cada estilo del héroe). Se indican por el rasgo general al que van unidas.</div>
+    <div class="dato"><b>Total</b>Todas las builds gastan los <b>62 puntos</b> (la pantalla marca «Puntos asignables: 0»). Las especializaciones de habilidad no gastan puntos.</div>
+    <div class="dato"><b>Equipo</b>Todo Legendario +10, nivel 60. Cada efecto lleva su calidad: <span class="g gS" style="display:inline-block">S</span> <span class="g gA" style="display:inline-block">A</span> <span class="g gB" style="display:inline-block">B</span> <span class="g gC" style="display:inline-block">C</span> <span class="g gD" style="display:inline-block">D</span>. «Refinar» = la línea que hay que mejorar.</div>
+    <div class="dato"><b>Nombres</b>Los que salen en el cliente en español van en español; el resto, en inglés como en los vídeos. «No visible» = el nombre no aparece en ningún fotograma ni en la wiki.</div>
+    <div class="dato"><b>Prueba</b>Cada build dice si el vídeo es en solitario y en qué piso se ve. Las builds de grupo no se incluyen.</div>
   </div>
 
   <h2>Builds por héroe</h2>
   <div id="heroes"></div>
+
+  <h2>Cartas Arcana (nombres del cliente en español)</h2>
+  <div class="panel">
+    <table>
+      <tr><th>En el juego</th><th>Inglés</th><th>Qué hace</th></tr>
+      <tr><td><b>Indomable</b></td><td>Indomitable</td><td>5 % de reducción de daño</td></tr>
+      <tr><td><b>Cuerpo de hierro</b></td><td>Iron Body</td><td>+15 % de vida</td></tr>
+      <tr><td>Acorazado</td><td>Ironclad</td><td>Defensiva</td></tr>
+      <tr><td>Esquiva veloz</td><td>Swift Evasion</td><td>Defensiva</td></tr>
+      <tr><td>Golpe letal</td><td>Lethal Strike</td><td>+10 % de bonificación de daño total</td></tr>
+      <tr><td>Cazador de jefes</td><td>Boss Hunter</td><td>Daño a jefes</td></tr>
+      <tr><td>Presa final</td><td>Final Prey</td><td>+30 % de carga de la definitiva</td></tr>
+      <tr><td>Congelación profunda</td><td>Deep Freeze</td><td>Ofensiva</td></tr>
+      <tr><td>Relámpago en cadena</td><td>Chain Lightning</td><td>Ofensiva</td></tr>
+      <tr><td>Cuerpo a cuerpo</td><td>Close Quarters</td><td>Ofensiva (corta distancia)</td></tr>
+      <tr><td>Primera sangre</td><td>First Blood</td><td>Ofensiva</td></tr>
+    </table>
+    <p class="nota">La tienda de Arcana es aleatoria: ningún vídeo muestra un orden de compra fijo. Cada build dice cuáles prioriza su jugador.</p>
+  </div>
 </main>
 
-<footer id="fuentes">
-  <b>Fuentes (con fecha):</b><br>
-  · Notas oficiales: <a href="https://www.marvelrivals.com/gameupdate/20261014/41548_1316588.html" target="_blank">20261015</a> (14-oct-2026, arreglo de Jeff), <a href="https://www.marvelrivals.com/gameupdate/20261006/41548_1315865.html" target="_blank">Temporada 10.5</a> (6-oct-2026, sin cambios en el modo), <a href="https://www.marvelrivals.com/20260722/41525_1308589.html" target="_blank">20260723</a> (22-jul-2026, piso 300 y recompensa del 260).<br>
-  · <a href="https://marvelrivals.fandom.com/wiki/Blood_Hunt" target="_blank">Wiki de Fandom</a> (editada el 10-oct-2026; también los retratos) y <a href="https://marvelrivals.gg/marvel-rivals-season-10-5-roadmap/" target="_blank">hoja de ruta de la 10.5</a> (7-oct-2026).<br>
-  · Builds: vídeos con partida en el piso 300 de jul–ago 2026 (NugnugTV, HobbyAmi, Jeluuuu), vigentes porque las notas oficiales hasta el 15-oct no cambian el modo. Enlaces en cada héroe.<br>
-  · Nombres de rasgos en inglés (de los vídeos): falta confirmar cómo aparecen en el cliente en español.
+<footer>
+  <b>Fuentes (con fecha):</b> notas oficiales <a href="https://www.marvelrivals.com/gameupdate/20261014/41548_1316588.html" target="_blank">20261015</a> (14-oct-2026), <a href="https://www.marvelrivals.com/gameupdate/20261006/41548_1315865.html" target="_blank">Temporada 10.5</a> (6-oct-2026) y <a href="https://www.marvelrivals.com/20260722/41525_1308589.html" target="_blank">20260723</a> (22-jul-2026); <a href="https://marvelrivals.fandom.com/wiki/Blood_Hunt" target="_blank">wiki de Fandom</a> (10-oct-2026, también los retratos).
+  Builds: fotogramas de los vídeos enlazados en cada build (jul–ago 2026), vigentes porque las notas oficiales hasta el 15-oct-2026 no cambian el modo. Nombres en español: vídeo de Jeluuuu (8-ago-2026).
 </footer>
 
 <script>
+// Árbol general (igual en todos los héroes). Índices 0..17 = rasgos 1..18.
+const NODOS = ['Bonificación de daño (+10 %/punto)', 'Vida (corazón)', 'Amplificación de salida (corona)', 'Armadura (hexágono)', 'Daño crítico (rayo)', 'Escudo (no visible)',
+  'Corazón (no visible)', 'Tasa de golpe crítico (+3 %/punto)', 'Escudo (no visible)', 'Corona (no visible)', 'Esquiva (antifaz)', 'Bota (no visible)',
+  'Daño de precisión (flecha)', 'Hexágono (no visible)', 'Flecha doble (no visible)', 'Antifaz (no visible)', 'Carga de definitiva / rasgo roto', 'Escudo (no visible)'];
+// Elecciones: A tras el rasgo 6, B tras el 11, C tras el 18
+const ELEC = { A: ['Vel. de ataque principal +40 %', 'Reducción de enfriamiento −40 %'], B: ['Daño principal +50 %', 'Daño de habilidad +50 %'], C: ['Multiplicador de daño crítico', 'Multiplicador de daño de precisión'] };
+const FILAS = [2, 4, 6, 7, 9, 11, 12, 14, 16, 18]; // rasgos generales con rama al lado
+
 const H = [
-  { id: 'thor', n: 'Thor', rol: 'Vanguard', c: '#38bdf8',
-    resumen: 'El más cómodo: hace el 300 en solitario con las dos builds.',
-    filas: [
-      ['Árbol', 'Rune Awakening «rayo»', 'Storm Surge'],
-      ['Exclusivo / piezas', 'Lightning Domain (S), Rune Onslaught, High-Speed Shock / High Voltage', '1 Surprise Strike (S), 2 Thunder Torrent, 1 Rising Thunder, Divine Stride o Aegis of Thunder'],
-      ['Puntos', '3 en Immortal Rune Awakening', '—'],
-      ['Stats', 'Crítico + Total Damage + daño a jefes', 'Crítico + Total Damage'],
+ { id: 'thor', n: 'Thor', rol: 'Vanguard', c: '#38bdf8', ramas: ['Storm Surge (dorada)', 'Rune Awakening (azul)'], builds: [
+  { nombre: 'Rune Awakening «rayo»', tipo: 'Principal',
+    prueba: [['ok', 'Solitario (1 jugador en el marcador)'], ['ok', 'Partida en Pesadilla 300 en pantalla']],
+    gen: [5,1,5,1,5,1, 1,5,1,5,1,1, 4,1,1,1,1,1], elec: { A: 0, B: 1, C: 0 },
+    rama: [[0,3,'',3,3,'Enchanted Flurry'],[0,3,'',3,3,'Immortal Rune'],[0,3,'',0,3,'Rolling Thunder'],[0,1,'',1,1,'Endless Current'],[0,3,'',3,3,'Lightning Domain'],[0,3,'',3,3,'no visible'],[0,1,'',1,1,'no visible'],[0,3,'',3,3,'no visible'],[0,3,'',0,3,'Ultimate Storm'],[0,1,'',1,1,'no visible']],
+    equipo: [
+      ['Arma', 'Gaea Sigil', 'Durante la runa, daño del proyectil de Mjolnir Bash +30000', [['S','Bonificación de daño total +831 %'],['A','Daño crítico +984 %'],['S','+1245 % contra jefes'],['B','Tasa de golpe crítico +17 %',1],['S','High-Voltage Field +2313 %']]],
+      ['Armadura', 'Armadura Rúnica', 'Salud +3628 · Valor de armadura +657', [['S','Valor de armadura +768'],['S','Salud restaurada al derrotar a un enemigo +81'],['S','Salud +2175'],['S','Salud +160 %'],['S','Reducción del enfriamiento de la Runa de curación +117 %']]],
+      ['Accesorio', 'Amuleto de alquimia', 'Tasa de golpe crítico +24,3 % · Bloqueo +27,7 %', [['S','+1245 % contra jefes'],['S','Daño crítico +1248 %'],['S','Daño crítico +1248 %'],['A','Bonificación de daño total +698 %',1],['B','Rune Onslaught +164 %',1]]],
+      ['Exclusivo', "God Tempest's Wrath", 'Explosión de Mjolnir Bash +1198', [['S','Impulso de salida total +831 %'],['S','Daño crítico +1248 %'],['B','Rune Onslaught +153 %',1],['S','Lightning Domain +10,68 m'],['S','High-Speed Shock +664 %']]],
     ],
-    nota: 'Rune Awakening hizo el 300 tres veces seguidas en solitario. Storm Surge pega más a los jefes y es la más fácil en solitario hasta el 260.',
-    videos: [['NugnugTV · Rune Awakening N300 (23-jul)', 'https://www.youtube.com/watch?v=h5ExXw6Icf0'], ['NugnugTV · Storm Surge (3-ago)', 'https://www.youtube.com/watch?v=Gl5qE24dPZg'], ['HobbyAmi · N300 solo (18-ago)', 'https://www.youtube.com/shorts/uVUb2rOSm7E']] },
-  { id: 'squirrel-girl', n: 'Squirrel Girl', rol: 'Duelist', c: '#f97316',
-    resumen: 'La que más sube el daño del equipo en grupo.',
-    filas: [
-      ['Árbol', 'Bellotas / Acorn Rain con CD de habilidad', '—'],
-      ['Obligatorio', 'Acorn Rain (A/S) y Rhythm of Nature', '—'],
-      ['Piezas', '<span class="etq">Solo</span>2 Bursting Acorn + 1 Jumbo Acorn', '<span class="etq">Grupo</span>2 Jumbo Acorn + 1 Bursting Acorn (sube ~700 % el daño del equipo)'],
-      ['Arcana', 'Lethal Strike, Deep Freeze, Chain Lightning, Boss Hunter', '—'],
+    arcana: 'Iron Body, Boss Hunter, Lethal Strike (vídeo NugnugTV). Otra prueba en solitario (axelerator) lleva Iron Body ×1, Indomitable ×2 e Ironclad.',
+    nota: 'Variante también probada en solitario en el 300 (axelerator, 23-jul): rasgo 13 a <b>1/5</b> y esos 3 puntos en <b>Ultimate Storm 3/3</b>; su armadura cambia «vida al derrotar» y «valor de armadura» por Bloqueo +28 % y Reducción de daño al bloquear +344.',
+    videos: [['NugnugTV · N300 en solitario (23-jul) · árbol 0:51–1:00, equipo 10:05–11:31', 'https://www.youtube.com/watch?v=h5ExXw6Icf0'], ['axelerator · N300 en solitario (23-jul) · build 3:41–3:45', 'https://www.youtube.com/watch?v=N_J5THue-X0']] },
+  { nombre: 'Storm Surge', tipo: 'Alternativa',
+    prueba: [['ok', 'Solitario (1 jugador en el marcador)'], ['medio', 'Partida en pantalla: Pesadilla 260 (el 300 lo dice él)']],
+    gen: [2,1,5,1,5,1, 1,5,1,5,1,1, 1,1,1,1,1,1], elec: { A: 0, B: 1, C: 0 },
+    rama: [[3,3,'no visible',0,3,''],[3,3,'no visible',0,3,''],[3,3,'no visible',0,3,''],[1,1,'no visible',0,1,''],[3,3,'no visible',0,3,''],[3,3,'no visible',0,3,''],[1,1,'no visible',0,1,''],[3,3,'no visible',0,3,''],[3,3,'no visible',0,3,''],[1,1,'no visible',0,1,'']],
+    equipo: [
+      ['Arma', 'Elderwood Haft', 'Daño base de Storm Surge +11250', [['S','Bonificación de daño total +831 %'],['S','Surprise Strike +597 %'],['S','Daño crítico +1248 %'],['S','Tasa de golpe crítico +24,3 %'],['S','+1245 % contra enemigos cercanos']]],
+      ['Armadura', 'Armadura Rúnica', 'Salud +3628 · Valor de armadura +657', [['S','Valor de armadura +768'],['S','Salud restaurada al derrotar a un enemigo +81'],['S','Salud +2175'],['S','Salud +160 %'],['S','Reducción del enfriamiento de la Runa de curación +117 %']]],
+      ['Accesorio', 'Amuleto de alquimia', 'Tasa de golpe crítico +24,3 % · Bloqueo +27,7 %', [['C','+714 % contra enemigos cercanos',1],['S','Daño crítico +1248 %'],['S','Tasa de golpe crítico +24,3 %'],['S','Bonificación de daño total +831 %'],['S','Thunder Torrent +404 %']]],
+      ['Exclusivo', 'Cosmic Cape', 'Explosión al chocar con Storm Surge +5460', [['S','Impulso de salida total +831 %'],['S','Daño crítico +1248 %'],['S','Rising Thunder +1128 %'],['A','Thunder Torrent +333 %',1],['S','Aegis of Thunder +1980 de escudo']]],
     ],
-    nota: 'Es la única que no lleva Indomitable + Iron Body.',
-    videos: [['NugnugTV · Squirrel Girl (27-jul)', 'https://www.youtube.com/watch?v=zEd1_eXVgoE'], ['Jeluuuu · Pesadilla 300 en español (8-ago)', 'https://www.youtube.com/watch?v=sC0YpHpTcBw']] },
-  { id: 'moon-knight', n: 'Moon Knight', rol: 'Duelist', c: '#e2e8f0',
-    resumen: 'Limpia oleadas muy rápido; sufre contra los jefes.',
-    filas: [
-      ['Árbol', 'Melee', 'Lunar Glide (detalle sin confirmar)'],
-      ['Piezas', 'Avatar of the Moon God (1–2), Full Moon Spin (S), Fist of Khonshu', '—'],
+    arcana: 'No se ve en el vídeo; recomienda cartas de reducción de daño (Indomable, Cuerpo de hierro).',
+    nota: 'Es la versión del 16-ago, que él llama «la más fácil en solitario». En la del 3-ago: Bonificación de daño 5/5, rama a 1/3 en el antifaz y 2/3 en el hexágono, y el exclusivo con Divine Stride +4,16 s en vez de Aegis of Thunder.',
+    videos: [['NugnugTV · solitario (16-ago) · árbol 2:48–3:03, equipo 4:04–7:42', 'https://www.youtube.com/watch?v=dhxzgsassQk'], ['NugnugTV · solitario (3-ago)', 'https://www.youtube.com/watch?v=Gl5qE24dPZg']] },
+ ]},
+ { id: 'squirrel-girl', n: 'Squirrel Girl', rol: 'Duelist', c: '#f97316', ramas: ['Bellotas (dorada)', 'Ardillas (azul)'], builds: [
+  { nombre: 'Precisión en solitario', tipo: 'Principal',
+    prueba: [['ok', 'Solitario (1 jugador en el marcador)'], ['medio', 'Partida en pantalla: Pesadilla 260; el 300 (top 40, ~6 min) en la clasificación']],
+    gen: [5,1,5,1,1,1, 1,1,1,3,1,1, 5,1,5,1,1,1], elec: { A: 1, B: 1, C: 1 },
+    rama: [[3,3,'no visible',3,3,'no visible'],[3,3,'no visible',1,3,'no visible'],[3,3,'no visible',3,3,'Rodent Plague'],[1,1,'no visible',1,1,'Offense is Defense'],[1,3,'no visible',0,3,''],[3,3,'no visible',0,3,''],[1,1,'no visible',0,1,''],[0,3,'',0,3,''],[0,3,'',0,3,''],[0,1,'',0,1,'']],
+    equipo: [
+      ['Arma', 'Tirachinas de Fresno', 'Daño de Bellota explosiva +1258', [['S','Bonificación de daño total +831 %'],['S','Mejora de Bellota gigante +348 % (vulnerabilidad)'],['S','Daño de precisión +2913 %'],['S','Tasa de precisión +9,3 %'],['S','Impulso de salida total +831 %']]],
+      ['Armadura', 'Armadura Rúnica', 'No se ve en este vídeo', [['','Usa la misma de los demás: Valor de armadura, Salud restaurada al derrotar, Salud, Salud %, Runa de curación']]],
+      ['Accesorio', 'Amuleto de alquimia', 'Tasa de golpe crítico +24,3 % · Bloqueo +27,7 %', [['B','Impulso de salida total +606 %',1],['S','Daño de precisión +2913 %'],['D','Tasa de golpe crítico +11,4 % (inútil en precisión)',1],['S','Bonificación de daño total +831 %'],['S','Mejora de Bellota explosiva +1449 %']]],
+      ['Exclusivo', 'Semilla de Yggdrasill', 'Tamaño y radio de las bellotas +537 %', [['A','+1085 % contra jefes',1],['S','Daño de precisión +2913 %'],['S','Mejora de Bellota explosiva +1449 %'],['A','Rhythm of Nature +64',1],['S','Mejora de Lluvia de Bellotas −0,52']]],
     ],
-    nota: 'Muy buena contra oleadas, floja contra jefes.',
-    videos: [['NugnugTV · Melee (6-ago)', 'https://www.youtube.com/watch?v=IVVrnFjfH_M'], ['NugnugTV · Lunar Glide (26-jul)', 'https://www.youtube.com/watch?v=6SVhaMivJD8']] },
-  { id: 'the-punisher', n: 'The Punisher', rol: 'Duelist', c: '#a3a3a3',
-    resumen: 'El mejor contra jefes con escopeta.',
-    filas: [
-      ['Árbol', 'Escopeta (Sweeper)', '<span class="etq">Grupo</span>Rifle (Barrager)'],
-      ['Piezas', 'Hail of Bullets en las 3 piezas', '3 Multi-Trajectory + Fatal Pursuit + High-Speed Rifling'],
-      ['Exclusivo', 'Chain Fire', '—'],
+    arcana: 'Siempre cartas de daño: Golpe letal, Congelación profunda, Relámpago en cadena, Cazador de jefes (es la única que no lleva las defensivas).',
+    nota: 'Refina primero la línea <b>D</b> de crítico del amuleto, luego su <b>B</b>, luego las <b>A</b> de la Semilla. Lo que exige la build: 2 líneas de Bellota explosiva, 1 de Bellota gigante, 1 de Lluvia de Bellotas y 1 de Rhythm of Nature.',
+    videos: [['NugnugTV · solitario (27-jul) · árbol 4:18–4:28, equipo 5:36–5:46, clasificación 7:38', 'https://www.youtube.com/watch?v=zEd1_eXVgoE']] },
+ ], fuera: 'Fuera: la variante «en grupo» (2 Bellota gigante + 1 explosiva) y la build de Jeluuuu (sin prueba de solitario; partida en el 260). De Jeluuuu solo se usan los nombres en español.' },
+ { id: 'moon-knight', n: 'Moon Knight', rol: 'Duelist', c: '#e2e8f0', ramas: ['Puño / melee (dorada)', 'Ankh / Lunar Glide (azul)'], builds: [
+  { nombre: 'Lunar Glide', tipo: 'Principal',
+    prueba: [['ok', 'Solitario (1 jugador en el marcador)'], ['medio', 'Partida en pantalla: Pesadilla 260; perfil «Highest Difficulty Cleared: NIGHTMARE 300»']],
+    gen: [5,1,5,1,5,1, 1,5,1,5,1,1, 5,1,3,1,1,1], elec: { A: 1, B: 0, C: 0 },
+    rama: [[0,3,'',3,3,'no visible'],[0,3,'',3,3,'no visible'],[0,3,'',0,3,''],[0,1,'',0,1,''],[1,3,'Fist of Khonshu',0,3,''],[1,3,"Moon God's Chosen",3,3,'no visible'],[0,1,'',1,1,'no visible'],[0,3,'',0,3,''],[0,3,'',3,3,'Lunar Glide'],[0,1,'',0,1,'']],
+    equipo: [
+      ['Arma', 'Scepter of Rites', 'Crescent Dart +180 · Moonblade +266', [['S','Bonificación de daño total +831 %'],['S','Impulso de salida total +831 %'],['S','+1246 % contra jefes'],['A','Tasa de golpe crítico +19,1 %'],['C','Lunar Glide −0,32 s',1]]],
+      ['Armadura', 'Armadura Rúnica', 'Salud +3628 · Valor de armadura +657', [['S','Valor de armadura +768'],['S','Salud restaurada por segundo en Restorative Respite +540'],['A','Salud +1688'],['A','Salud +132 %'],['B','Reducción del enfriamiento de la Runa de curación +73 %',1]]],
+      ['Accesorio', 'Amuleto de alquimia', 'Tasa de golpe crítico +24,3 % · Bloqueo +27,7 %', [['B','Impulso de salida total +654 %',1],['S','Daño crítico +1248 %'],['B','Tasa de golpe crítico +15,4 %',1],['S','Bonificación de daño total +831 %'],['B','Waxing Moon +26',1]]],
+      ['Exclusivo', 'Pendant of Oshtur', 'Ankh +9 cargas · vida del Ankh +108000 · 50 % de reducción de daño', [['A','+962 % contra jefes'],['S','Daño crítico +1248 %'],['S','Waxing Moon +40'],['S','Moonrise +12 (no activo)'],['S','Lunar Glide −0,57 s']]],
     ],
-    nota: 'La escopeta hace el 300 en solitario; el rifle solo vale en grupo.',
-    videos: [['NugnugTV · Escopeta en solitario (28-jul)', 'https://www.youtube.com/watch?v=VXojxq9OQ3o'], ['NugnugTV · Rifle (24-jul)', 'https://www.youtube.com/watch?v=9LTCBxvz3bM']] },
-  { id: 'blade', n: 'Blade', rol: 'Duelist', c: '#dc2626',
-    resumen: 'Gira alrededor de la definitiva.',
-    filas: [
-      ['Árbol', 'Definitiva', '«Immortal Sword» melee'],
-      ['Piezas', '3 Feast of the Hunt, 1 Synergy of Swords, 1 Blade Shadows', '2–3 Unfazed, Swift Edge, Honed Edge'],
-      ['Puntos', '5 en carga de definitiva', '—'],
-      ['Arcana', 'Final Prey', '—'],
+    arcana: 'No se ve qué elige. Ofertas vistas: Indomable, Golpe letal, Cazador de jefes, Relámpago en cadena, Presa final, Cuerpo de hierro.',
+    nota: 'La línea Moonrise del exclusivo sale «no activa»: es un buen candidato a refinar.',
+    videos: [['NugnugTV · solitario (26-jul) · árbol 4:42–4:51, equipo 7:47–8:56', 'https://www.youtube.com/watch?v=6SVhaMivJD8']] },
+  { nombre: 'Melee (Uru Knuckles)', tipo: 'Alternativa',
+    prueba: [['medio', 'Probable solitario (sin compañeros en el HUD; no se ve el marcador)'], ['medio', 'Partida en pantalla: Pesadilla 270; puesto 65 de Moon Knight']],
+    gen: [5,1,3,1,4,1, 1,5,1,3,1,1, 1,1,1,1,5,1], elec: { A: 1, B: 1, C: 0 },
+    rama: [[3,3,'no visible',0,3,''],[3,3,'Full Moon Spin',0,3,''],[3,3,'no visible',0,3,''],[1,1,'no visible',0,1,''],[1,3,'Fist of Khonshu',0,3,''],[3,3,"Moon God's Chosen",0,3,''],[1,1,'no visible',0,1,''],[3,3,'Overlapping Shadows',0,3,''],[3,3,'no visible',0,3,''],[1,1,'no visible',0,1,'']],
+    equipo: [
+      ['Arma', 'Uru Knuckles', 'Eclipse Explosion +450 · mejorada +5992', [['S','Bonificación de daño total +831 %'],['S','+1245 % a corta distancia'],['A','Daño crítico +1071 %'],['A','Tasa de golpe crítico +18,4 %'],['S','Avatar of the Moon God +9 %']]],
+      ['Armadura', 'Armadura Rúnica', 'Salud +3628 · Valor de armadura +657', [['','Las mismas líneas que en Lunar Glide']]],
+      ['Accesorio', 'Amuleto de alquimia', 'Tasa de golpe crítico +24,3 % · Bloqueo +27,7 %', [['C','+651 % contra jefes',1],['S','Daño crítico +1248 %'],['A','Daño crítico +1090 %'],['A','Bonificación de daño total +663 %'],['B','Overlapping Shadows +26 / +44']]],
+      ['Exclusivo', 'Gauntlets of Thoth', 'Fist of Eclipse sobre un Ankh: +16 explosiones · Ankh −50 % enfriamiento · +90 % reducción de daño', [['A','+938 % a corta distancia'],['S','Daño crítico +1248 %'],['S','Full Moon Spin +84 % / +45 %'],['S','Fist of Khonshu +416 %'],['D','Overlapping Shadows +16 / +28',1]]],
     ],
-    nota: 'La melee no llega al tiempo límite contra los jefes del 300.',
-    videos: [['NugnugTV · Definitiva (25-jul)', 'https://www.youtube.com/watch?v=xtcFMMraHxg'], ['NugnugTV · Immortal Sword (30-jul)', 'https://www.youtube.com/watch?v=PsHs3Pb9Jns']] },
-  { id: 'jeff-the-land-shark', n: 'Jeff the Land Shark', rol: 'Strategist', c: '#60a5fa',
-    resumen: 'El más difícil de llevar al 300.',
-    filas: [
-      ['Árbol', 'Embestida (Hide and Seek)', '—'],
-      ['Piezas', 'Forward Frenzy en cada pieza', '—'],
-      ['Exclusivo', 'Unsharkstoppable', '—'],
-      ['Stats y Arcana', 'Crítico + daño a corta distancia; Arcana defensivas', '—'],
+    arcana: 'En la partida lleva Golpe letal ×1 e Indomable ×1.',
+    nota: 'Él mismo dice que tiene <b>poco daño contra jefes</b> en solitario: úsala para oleadas.',
+    videos: [['NugnugTV (6-ago) · árbol 4:38–4:46, equipo 5:39–8:24, clasificación 10:48', 'https://www.youtube.com/watch?v=IVVrnFjfH_M']] },
+ ]},
+ { id: 'the-punisher', n: 'The Punisher', rol: 'Duelist', c: '#a3a3a3', ramas: ['Rifle (dorada)', 'Escopeta (azul)'], builds: [
+  { nombre: 'Escopeta', tipo: 'Principal',
+    prueba: [['ok', 'Solitario (1 jugador en el marcador)'], ['medio', 'Partida en pantalla: Pesadilla 260']],
+    gen: [5,1,5,1,5,1, 1,5,1,5,1,1, 5,1,1,2,1,1], elec: { A: 0, B: 0, C: 0 },
+    rama: [[0,3,'',3,3,'no visible'],[0,3,'',3,3,'no visible'],[0,3,'',3,3,'no visible'],[0,1,'',1,1,'no visible'],[0,3,'',1,3,'no visible'],[0,3,'',3,3,'no visible'],[0,1,'',1,1,'no visible'],[0,3,'',0,3,'Chain Reaction'],[0,3,'',0,3,'High-Energy Explosive (bloqueado)'],[0,1,'',1,1,'no visible']],
+    equipo: [
+      ['Arma', 'Marauder Shotgun', 'Deliverance +402 de daño por bala', [['S','Bonificación de daño total +831 %'],['S','Hail of Bullets +24'],['S','Daño crítico +1248 %'],['B','Tasa de golpe crítico +16,8 %',1],['S','+1245 % contra jefes']]],
+      ['Armadura', 'Armadura Rúnica (+8)', 'Salud +3387 · Valor de armadura +613', [['A','Salud +1596'],['A','Salud restaurada al derrotar a un enemigo +62',1],['B','Valor de armadura +459',1],['S','Salud +150 %'],['A','Ranuras de carga de Runa de curación +3']]],
+      ['Accesorio', 'Amuleto de alquimia', 'Tasa de golpe crítico +24,3 % · Bloqueo +27,7 %', [['A','+1089 % a corta distancia'],['A','Daño crítico +1029 %'],['C','Daño de precisión +1496 % (no sirve: build de crítico)',1],['S','Bonificación de daño total +831 %'],['S','Hail of Bullets +24']]],
+      ['Exclusivo', 'Mithril Slug', 'Cada impacto de Deliverance: +124 % al siguiente disparo', [['A','+1019 % a corta distancia'],['S','Daño crítico +1248 %'],['S','Hail of Bullets +24'],['S','Piercing Shot +40'],['S','Chain Fire +15']]],
     ],
-    nota: 'Arreglo del 15-oct: con el rasgo Reservoir ya crece bien el radio de Aqua Burst.',
-    videos: [['NugnugTV · Jeff (29-jul)', 'https://www.youtube.com/watch?v=4g6TWubYMTI']] },
+    arcana: 'Prioriza Indomable y Cuerpo de hierro.',
+    nota: '<b>Hail of Bullets en las 3 piezas</b> y <b>Chain Fire</b> en el exclusivo. Él recomienda cambiar «salud al derrotar» de la armadura por curación.',
+    videos: [['NugnugTV · solitario (28-jul) · árbol 4:25–4:48, equipo 5:21–7:03', 'https://www.youtube.com/watch?v=VXojxq9OQ3o']] },
+ ], fuera: 'Fuera: la build de rifle (en el vídeo hay un compañero; no hay prueba en solitario).' },
+ { id: 'blade', n: 'Blade', rol: 'Duelist', c: '#dc2626', ramas: ['Espada', 'Pistola'], builds: [
+  { nombre: 'Definitiva', tipo: 'Principal',
+    prueba: [['medio', 'Probable solitario (sin compañeros en el HUD)'], ['ok', 'Victoria en Pesadilla 300 en pantalla']],
+    gen: [5,1,5,1,1,1, 1,4,1,5,1,1, 5,1,4,1,5,1], elec: { A: 0, B: 1, C: 1 },
+    rama: [[1,3,'Swift Edge',0,3,''],[0,3,'',0,3,''],[3,3,'Unfazed',0,3,''],[1,1,'Swift Severance',0,1,''],[0,3,'',0,3,''],[3,3,'no visible',0,3,''],[1,1,'Sustained by Battle',0,1,'bloqueado'],[3,3,'no visible',0,3,''],[3,3,'Feast of the Hunt',0,3,''],[0,1,"Hunter's Aura",0,1,'']],
+    equipo: [
+      ['Arma', 'Stakes of Yggdrasill', 'Tajo de la espada +1635', [['S','Bonificación de daño total +831 %'],['S','Unfazed +21 tajos / +0,41'],['S','+1245 % a corta distancia'],['S','Tasa de precisión +9,3 %'],['S','Feast of the Hunt +40 %']]],
+      ['Armadura', 'Armadura Rúnica', 'No la abre en el vídeo', [['','Usa la misma de los demás: Valor de armadura, Salud restaurada al derrotar, Salud, Salud %, Runa de curación']]],
+      ['Accesorio', 'Amuleto de alquimia', 'Tasa de golpe crítico +24,3 % · Bloqueo +27,7 %', [['A','+968 % a corta distancia'],['S','Daño de precisión +2913 %'],['A','Daño de precisión +2505 %'],['S','Bonificación de daño total +831 %'],['A','Feast of the Hunt +30 %']]],
+      ['Exclusivo', 'Twilight Whetstone', 'Tajo +30 · +90 % de reducción de daño', [['A','+1046 % contra jefes'],['A','Daño de precisión +2337 %'],['A','Blade Shadows −0,12 s'],['S','Synergy of Swords +1371 %'],['S','Feast of the Hunt +40 %']]],
+    ],
+    arcana: 'Presa final (+30 % de carga de la definitiva) > Indomable > Cuerpo a cuerpo > Golpe letal > Cuerpo de hierro.',
+    nota: 'Necesitas <b>3× Feast of the Hunt, 1× Blade Shadows y 1× Synergy of Swords</b>, más Bonificación de daño total S en arma y accesorio. Mejor «corta distancia» que «contra jefes». <b>En solitario</b>, él cambia un Feast del arma o del accesorio por Blade Shadows. Rasgo 17 = Ultimate Boost 5/5 (+150 % de carga de la definitiva).',
+    videos: [['NugnugTV (25-jul) · victoria N300 3:28, árbol 3:34–4:49, equipo 4:51–7:46', 'https://www.youtube.com/watch?v=xtcFMMraHxg']] },
+ ], fuera: 'Fuera: «Immortal Sword» melee (en solitario no mata al jefe del 300 antes del tiempo límite).' },
+ { id: 'jeff-the-land-shark', n: 'Jeff the Land Shark', rol: 'Strategist', c: '#60a5fa', ramas: ['Aleta', 'Otra rama'], builds: [
+  { nombre: 'Embestida (Hide and Seek)', tipo: 'Principal',
+    prueba: [['ok', 'Solitario (3 huecos vacíos en la selección)'], ['medio', 'Partida en pantalla: Pesadilla 260; el 300 en solitario en la clasificación (puesto 14, 10:36)']],
+    gen: [5,1,5,1,5,1, 1,5,1,5,1,1, 1,1,1,1,3,1], elec: { A: 1, B: 1, C: 0 },
+    rama: [[1,3,'no visible',0,3,''],[3,3,'no visible',0,3,''],[3,3,'no visible',0,3,''],[1,1,'no visible',0,1,''],[3,3,'no visible',0,3,''],[3,3,'no visible',0,3,''],[1,1,'no visible',0,1,''],[1,3,'no visible',0,3,''],[3,3,'no visible',0,3,'bloqueado'],[0,1,'',0,1,'']],
+    equipo: [
+      ['Arma', 'Deep-Sea Propeller', 'Daño base de la embestida +1500', [['S','Bonificación de daño total +831 %'],['S','Forward Frenzy +597 %'],['S','Daño crítico +1248 %'],['A','Tasa de golpe crítico +19,8 %'],['C','Hangry +27 de carga de definitiva',1]]],
+      ['Armadura', 'Armadura Rúnica', 'Salud +3628 · Valor de armadura +657', [['S','Valor de armadura +768'],['B','Salud restaurada al derrotar a un enemigo +61',1],['A','Salud +1722'],['S','Salud +160 %'],['S','Reducción del enfriamiento de la Runa de curación +117 %']]],
+      ['Accesorio', 'Amuleto de alquimia', 'Tasa de golpe crítico +24,3 % · Bloqueo +27,7 %', [['B','+882 % contra jefes',1],['B','Tasa de golpe crítico +17,1 %',1],['S','Daño crítico +1248 %'],['S','Bonificación de daño total +831 %'],['S','Forward Frenzy +597 %']]],
+      ['Exclusivo', 'West Coast Bionic Fin', 'Hyper Sprint +15585 %', [['S','+1245 % a corta distancia'],['S','Daño crítico +1248 %'],['S','Forward Frenzy +597 %'],['A','Un-shark-stoppable +114 %'],['D','Hyper Sprint: onda de burbujas +952 → cámbiala por +1200 % a corta distancia',1]]],
+    ],
+    arcana: 'Siempre Indomable y Cuerpo de hierro.',
+    nota: '<b>Forward Frenzy en todas las piezas</b> y <b>Un-shark-stoppable</b> en el exclusivo. La build no usa el rasgo Reservoir (arreglado el 15-oct), así que ese cambio no la afecta.',
+    videos: [['NugnugTV (29-jul) · selección 0:43, árbol 5:17–5:39, equipo 5:43–8:02, clasificación 8:42', 'https://www.youtube.com/watch?v=4g6TWubYMTI']] },
+ ]},
 ];
+
+const pct = (p, m) => Math.round(p / m * 100);
+const nodo = (num, txt, p, m) => `<div class="nodo${p === m ? ' max' : ''}"><span class="pts">${p}/${m}</span><div class="n">${num}</div><div class="t">${txt}</div><div class="barra"><i style="width:${pct(p, m)}%"></i></div></div>`;
+const elecc = (letra, i) => `<div class="nodo elec"><span class="pts">1/1</span><div class="n">Elección ${letra}</div><div class="t"><b>${ELEC[letra][i]}</b> <span style="color:var(--suave)">(no: ${ELEC[letra][1 - i]})</span></div></div>`;
+
+function arbol(b) {
+  const out = [];
+  b.gen.forEach((p, i) => {
+    out.push(nodo('Rasgo ' + (i + 1), NODOS[i], p, 5));
+    if (i === 5) out.push(elecc('A', b.elec.A));
+    if (i === 10) out.push(elecc('B', b.elec.B));
+    if (i === 17) out.push(elecc('C', b.elec.C));
+  });
+  return out.join('');
+}
+const linea = l => `<div class="linea">${l[0] ? `<span class="g g${l[0]}">${l[0]}</span>` : '<span class="g" style="background:transparent"></span>'}<span>${l[1]}</span>${l[2] ? '<span class="refinar">refinar</span>' : ''}</div>`;
+
+function build(h, b, i) {
+  const gen = b.gen.reduce((a, x) => a + x, 0) + 3;
+  const ram = b.rama.reduce((a, r) => a + r[0] + r[3], 0);
+  return `<div class="build${i === 0 ? ' on' : ''}" data-b="${i}">
+    <div class="prueba">${b.prueba.map(p => `<span class="p ${p[0]}">${p[0] === 'ok' ? '✓' : '≈'} ${p[1]}</span>`).join('')}</div>
+    <h4>Árbol general</h4><div class="arbol">${arbol(b)}</div>
+    <h4>Ramas de habilidad</h4>
+    <table><tr><th>Junto al rasgo</th><th>${h.ramas[0]}</th><th>${h.ramas[1]}</th></tr>
+      ${b.rama.map((r, k) => `<tr><td>Rasgo ${FILAS[k]}</td><td${r[0] ? ' style="font-weight:700;color:#fff"' : ''}>${r[0]}/${r[1]}${r[2] ? ' · ' + r[2] : ''}</td><td${r[3] ? ' style="font-weight:700;color:#fff"' : ''}>${r[3]}/${r[4]}${r[5] ? ' · ' + r[5] : ''}</td></tr>`).join('')}
+    </table>
+    <p class="total">Total: <b>${gen}</b> en el árbol general + <b>${ram}</b> en las ramas = <b>${gen + ram} de 62</b> puntos.</p>
+    <h4>Equipo (Legendario +10, nivel 60)</h4>
+    <div class="equipo">${b.equipo.map(e => `<div class="pieza"><div class="ranura">${e[0]}</div><div class="pn">${e[1]}</div><div class="base">${e[2]}</div>${e[3].map(linea).join('')}</div>`).join('')}</div>
+    <h4>Cartas Arcana</h4><p class="nota">${b.arcana}</p>
+    <p class="nota">${b.nota}</p>
+    <p class="nota">Prueba en vídeo: ${b.videos.map(v => `<a href="${v[1]}" target="_blank" rel="noopener">${v[0]}</a>`).join(' · ')}</p>
+  </div>`;
+}
 
 document.getElementById('galeria').innerHTML = H.map(h => `
   <a class="carta" href="#${h.id}" style="--c:${h.c}">
@@ -173,19 +310,17 @@ document.getElementById('galeria').innerHTML = H.map(h => `
 
 document.getElementById('heroes').innerHTML = H.map(h => `
   <section class="heroe" id="${h.id}" style="--c:${h.c}">
-    <div class="foto"><img src="img/${h.id}.png" alt="${h.n}" width="181" height="256" loading="lazy"></div>
-    <div>
-      <div class="rol">${h.rol}</div>
-      <h3>${h.n}</h3>
-      <p class="resumen">${h.resumen}</p>
-      <table>
-        <tr><th></th><th>1.ª opción</th><th>Alternativa</th></tr>
-        ${h.filas.map(f => `<tr><td>${f[0]}</td><td class="op">${f[1]}</td><td>${f[2]}</td></tr>`).join('')}
-      </table>
-      <p class="nota">${h.nota}</p>
-      <div class="videos">Prueba en vídeo: ${h.videos.map(v => `<a href="${v[1]}" target="_blank" rel="noopener">${v[0]}</a>`).join(' · ')}</div>
-    </div>
+    <div class="cab"><img src="img/${h.id}.png" alt="${h.n}" width="181" height="256" loading="lazy"><div><div class="rol">${h.rol}</div><h3>${h.n}</h3></div></div>
+    <div class="tabs">${h.builds.map((b, i) => `<button class="${i === 0 ? 'on' : ''}" data-b="${i}">${b.tipo}: ${b.nombre}</button>`).join('')}</div>
+    ${h.builds.map((b, i) => build(h, b, i)).join('')}
+    ${h.fuera ? `<div class="fuera">${h.fuera}</div>` : ''}
   </section>`).join('');
+
+document.querySelectorAll('.heroe').forEach(s => s.querySelector('.tabs').addEventListener('click', e => {
+  const btn = e.target.closest('button'); if (!btn) return;
+  s.querySelectorAll('.tabs button').forEach(x => x.classList.toggle('on', x === btn));
+  s.querySelectorAll('.build').forEach(x => x.classList.toggle('on', x.dataset.b === btn.dataset.b));
+}));
 </script>
 </body>
 </html>

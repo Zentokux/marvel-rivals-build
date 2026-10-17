@@ -23,24 +23,24 @@
 | Arcana (cartas entre oleadas) | **Indomitable + Iron Body** (salvo Squirrel Girl) |
 | Equipo sobrante | Reciclar a Uru Shards y forjar la ranura que falte |
 
-## Builds por héroe
+## Builds por héroe (solo probadas en solitario)
 
-| | Héroe | 1.ª opción (probada en el piso 300) | Alternativa | Notas |
-|---|---|---|---|---|
-| <img src="img/thor.png" width="90" alt="Thor"> | **Thor** | **Rune Awakening «rayo»**: exclusivo Lightning Domain (S), Rune Onslaught, High-Speed Shock / High Voltage; 3 puntos en Immortal Rune Awakening; crítico + Total Damage + daño a jefes | **Storm Surge**: 1 Surprise Strike (S), 2 Thunder Torrent, 1 Rising Thunder, Divine Stride o Aegis of Thunder | Rune Awakening hizo el 300 tres veces seguidas en solitario. Storm Surge pega más a jefes y es la más fácil en solitario hasta el 260 |
-| <img src="img/squirrel-girl.png" width="90" alt="Squirrel Girl"> | **Squirrel Girl** | **Bellotas / Acorn Rain** con CD de habilidad: Acorn Rain (A/S) y Rhythm of Nature obligatorios. **Solo:** 2 Bursting Acorn + 1 Jumbo Acorn | **En grupo:** 2 Jumbo + 1 Bursting (sube ~700 % el daño del equipo) | Arcana: Lethal Strike, Deep Freeze, Chain Lightning, Boss Hunter |
-| <img src="img/moon-knight.png" width="90" alt="Moon Knight"> | **Moon Knight** | **Melee**: Avatar of the Moon God (1–2), Full Moon Spin (S), Fist of Khonshu | **Lunar Glide** (detalle sin extraer) | Muy buena contra oleadas, floja contra jefes |
-| <img src="img/the-punisher.png" width="90" alt="The Punisher"> | **The Punisher** | **Escopeta**: Hail of Bullets en las 3 piezas + Chain Fire en el exclusivo | **Rifle (solo en grupo)**: 3 Multi-Trajectory + Fatal Pursuit + High-Speed Rifling | La escopeta es la mejor contra jefes y hace el 300 en solitario |
-| <img src="img/blade.png" width="90" alt="Blade"> | **Blade** | **Definitiva**: 3 Feast of the Hunt, 1 Synergy of Swords, 1 Blade Shadows; 5 puntos en carga de definitiva; Arcana Final Prey | «Immortal Sword» melee: 2–3 Unfazed, Swift Edge, Honed Edge | La melee no llega al tiempo límite contra los jefes del 300 |
-| <img src="img/jeff-the-land-shark.png" width="90" alt="Jeff the Land Shark"> | **Jeff the Land Shark** | **Embestida (Hide and Seek)**: Forward Frenzy en cada pieza + Unsharkstoppable en el exclusivo; crítico + daño a corta distancia; Arcana defensivas | — | El más difícil de llevar al 300. Arreglo del 15-oct: con el rasgo Reservoir ya crece bien el radio de Aqua Burst |
+Las builds **exactas** (cada punto del árbol de rasgos, las ramas y las 4 piezas con cada efecto y su calidad) están en la web: **https://zentokux.github.io/marvel-rivals-build/** (`index.html`). Todas gastan los 62 puntos de nivel 60.
 
-Los nombres de rasgos están en inglés (de los vídeos). Falta confirmar cómo aparecen en el cliente en español.
+| Héroe | Principal | Alternativa | Fuera (no probada en solitario o no pasa el 300) |
+|---|---|---|---|
+| Thor | Rune Awakening «rayo» (solitario, partida en el 300 en pantalla) | Storm Surge (solitario) | — |
+| Squirrel Girl | Precisión en solitario | — | Variante «en grupo»; build de Jeluuuu (sin prueba de solitario) |
+| Moon Knight | Lunar Glide (solitario) | Melee / Uru Knuckles (probable solitario) | — |
+| The Punisher | Escopeta (solitario) | — | Rifle (hay un compañero en el vídeo) |
+| Blade | Definitiva (victoria en el 300; probable solitario) | — | Immortal Sword (no mata al jefe del 300) |
+| Jeff the Land Shark | Embestida (solitario; el 300 en la clasificación) | — | — |
 
 ## Sin confirmar
 
 1. Fecha de fin del modo (13-nov según la wiki; sin anuncio oficial).
-2. Detalle de la build Lunar Glide de Moon Knight.
-3. Nombres de rasgos y equipo en el cliente en español.
+2. Nombres de la mayoría de los rasgos del árbol (no salen en pantalla ni en la wiki).
+3. Solo Thor (Rune Awakening) y Blade se ven jugando el piso 300; el resto se ve en el 260–270 y el 300 consta en su perfil o en la clasificación.
 
 ## Fuentes
 
