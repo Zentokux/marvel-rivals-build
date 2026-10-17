@@ -25,14 +25,14 @@
 
 ## Builds por héroe
 
-| Héroe | 1.ª opción (probada en el piso 300) | Alternativa | Notas |
-|---|---|---|---|
-| **Thor** | **Rune Awakening «rayo»**: exclusivo Lightning Domain (S), Rune Onslaught, High-Speed Shock / High Voltage; 3 puntos en Immortal Rune Awakening; crítico + Total Damage + daño a jefes | **Storm Surge**: 1 Surprise Strike (S), 2 Thunder Torrent, 1 Rising Thunder, Divine Stride o Aegis of Thunder | Rune Awakening hizo el 300 tres veces seguidas en solitario. Storm Surge pega más a jefes y es la más fácil en solitario hasta el 260 |
-| **Squirrel Girl** | **Bellotas / Acorn Rain** con CD de habilidad: Acorn Rain (A/S) y Rhythm of Nature obligatorios. **Solo:** 2 Bursting Acorn + 1 Jumbo Acorn | **En grupo:** 2 Jumbo + 1 Bursting (sube ~700 % el daño del equipo) | Arcana: Lethal Strike, Deep Freeze, Chain Lightning, Boss Hunter |
-| **Moon Knight** | **Melee**: Avatar of the Moon God (1–2), Full Moon Spin (S), Fist of Khonshu | **Lunar Glide** (detalle sin extraer) | Muy buena contra oleadas, floja contra jefes |
-| **The Punisher** | **Escopeta**: Hail of Bullets en las 3 piezas + Chain Fire en el exclusivo | **Rifle (solo en grupo)**: 3 Multi-Trajectory + Fatal Pursuit + High-Speed Rifling | La escopeta es la mejor contra jefes y hace el 300 en solitario |
-| **Blade** | **Definitiva**: 3 Feast of the Hunt, 1 Synergy of Swords, 1 Blade Shadows; 5 puntos en carga de definitiva; Arcana Final Prey | «Immortal Sword» melee: 2–3 Unfazed, Swift Edge, Honed Edge | La melee no llega al tiempo límite contra los jefes del 300 |
-| **Jeff the Land Shark** | **Embestida (Hide and Seek)**: Forward Frenzy en cada pieza + Unsharkstoppable en el exclusivo; crítico + daño a corta distancia; Arcana defensivas | — | El más difícil de llevar al 300. Arreglo del 15-oct: con el rasgo Reservoir ya crece bien el radio de Aqua Burst |
+| | Héroe | 1.ª opción (probada en el piso 300) | Alternativa | Notas |
+|---|---|---|---|---|
+| <img src="img/thor.png" width="90" alt="Thor"> | **Thor** | **Rune Awakening «rayo»**: exclusivo Lightning Domain (S), Rune Onslaught, High-Speed Shock / High Voltage; 3 puntos en Immortal Rune Awakening; crítico + Total Damage + daño a jefes | **Storm Surge**: 1 Surprise Strike (S), 2 Thunder Torrent, 1 Rising Thunder, Divine Stride o Aegis of Thunder | Rune Awakening hizo el 300 tres veces seguidas en solitario. Storm Surge pega más a jefes y es la más fácil en solitario hasta el 260 |
+| <img src="img/squirrel-girl.png" width="90" alt="Squirrel Girl"> | **Squirrel Girl** | **Bellotas / Acorn Rain** con CD de habilidad: Acorn Rain (A/S) y Rhythm of Nature obligatorios. **Solo:** 2 Bursting Acorn + 1 Jumbo Acorn | **En grupo:** 2 Jumbo + 1 Bursting (sube ~700 % el daño del equipo) | Arcana: Lethal Strike, Deep Freeze, Chain Lightning, Boss Hunter |
+| <img src="img/moon-knight.png" width="90" alt="Moon Knight"> | **Moon Knight** | **Melee**: Avatar of the Moon God (1–2), Full Moon Spin (S), Fist of Khonshu | **Lunar Glide** (detalle sin extraer) | Muy buena contra oleadas, floja contra jefes |
+| <img src="img/the-punisher.png" width="90" alt="The Punisher"> | **The Punisher** | **Escopeta**: Hail of Bullets en las 3 piezas + Chain Fire en el exclusivo | **Rifle (solo en grupo)**: 3 Multi-Trajectory + Fatal Pursuit + High-Speed Rifling | La escopeta es la mejor contra jefes y hace el 300 en solitario |
+| <img src="img/blade.png" width="90" alt="Blade"> | **Blade** | **Definitiva**: 3 Feast of the Hunt, 1 Synergy of Swords, 1 Blade Shadows; 5 puntos en carga de definitiva; Arcana Final Prey | «Immortal Sword» melee: 2–3 Unfazed, Swift Edge, Honed Edge | La melee no llega al tiempo límite contra los jefes del 300 |
+| <img src="img/jeff-the-land-shark.png" width="90" alt="Jeff the Land Shark"> | **Jeff the Land Shark** | **Embestida (Hide and Seek)**: Forward Frenzy en cada pieza + Unsharkstoppable en el exclusivo; crítico + daño a corta distancia; Arcana defensivas | — | El más difícil de llevar al 300. Arreglo del 15-oct: con el rasgo Reservoir ya crece bien el radio de Aqua Burst |
 
 Los nombres de rasgos están en inglés (de los vídeos). Falta confirmar cómo aparecen en el cliente en español.
 
@@ -61,4 +61,5 @@ Los nombres de rasgos están en inglés (de los vídeos). Falta confirmar cómo 
 - NugnugTV, Blade definitiva (25-jul-2026; confirmado igual): https://www.youtube.com/watch?v=xtcFMMraHxg
 - NugnugTV, Blade Immortal Sword (30-jul-2026; confirmado igual): https://www.youtube.com/watch?v=PsHs3Pb9Jns
 - NugnugTV, Jeff (29-jul-2026; confirmado igual): https://www.youtube.com/watch?v=4g6TWubYMTI
+- Retratos de los héroes: wiki de Fandom, imágenes «Main Page Portrait» (página editada el 10-oct-2026): https://marvelrivals.fandom.com/wiki/Blood_Hunt
 - HobbyAmi, Thor N300 en solitario (18-ago-2026; confirmado igual): https://www.youtube.com/shorts/uVUb2rOSm7E
