@@ -64,26 +64,31 @@ h4 { color: var(--oro); font-size: .92rem; margin: 1.1rem 0 .5rem; text-transfor
 .g { flex: none; width: 1.35rem; text-align: center; font-weight: 900; border-radius: 4px; font-size: .74rem; padding: .05rem 0; color: #111; }
 .gS { background: var(--gS); } .gA { background: var(--gA); } .gB { background: var(--gB); } .gC { background: var(--gC); } .gD { background: var(--gD); }
 .refinar { font-size: .68rem; color: var(--rojo); border: 1px solid var(--rojo); border-radius: 99px; padding: 0 .4rem; margin-left: auto; white-space: nowrap; }
-.juego { max-width: 470px; border-radius: 10px; overflow: hidden; background: linear-gradient(180deg, #6b0f1d, #b1262f 45%, #24434f); border: 1px solid var(--borde); }
-.cabj { display: grid; grid-template-columns: 1fr 72px 54px 54px; font-size: .68rem; font-weight: 800; color: #fff; }
+.juego { max-width: 500px; border-radius: 10px; overflow: hidden; background: linear-gradient(180deg, #6b0f1d, #b1262f 45%, #24434f); border: 1px solid var(--borde); }
+.cabj, .fila { display: grid; grid-template-columns: 1fr 30px 84px 54px 54px; }
+.cabj { font-size: .68rem; font-weight: 800; color: #fff; }
 .cabj span { padding: .4rem .3rem; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.cabj .g0 { background: #8b2fc9; } .cabj .g1 { background: #a8823a; } .cabj .g2 { background: #2563eb; }
-.fila { display: grid; grid-template-columns: 1fr 72px 54px 54px; align-items: center; min-height: 58px; }
-.fila .lb { font-size: .68rem; text-align: right; padding: 0 .45rem; color: #fde2e4; line-height: 1.15; }
+.cabj .g0 { background: #8b2fc9; grid-column: 1 / 4; } .cabj .g1 { background: #a8823a; } .cabj .g2 { background: #2563eb; }
+.fila { align-items: center; min-height: 62px; }
+.fila .lb { font-size: .68rem; text-align: right; padding: 0 .3rem; color: #fde2e4; line-height: 1.15; }
 .fila .lb b { color: #fff; }
 .fila .c { position: relative; align-self: stretch; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .fila .c::before { content: ''; position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; transform: translateX(-50%); background: #e879f9; }
-.fila:first-of-type .c::before { top: 50%; } .fila:last-child .c::before { bottom: 50%; }
-.circ { position: relative; z-index: 1; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: #2a0f2e; border: 2px solid #f0abfc; color: #f5d0fe; font-size: 1.05rem; }
-.circ.max { background: #c026d3; color: #fff; box-shadow: 0 0 10px #f0abfc; }
-.circ.ch { width: 30px; height: 30px; font-size: .8rem; }
-.circ.off { opacity: .45; }
+.fila:first-child .c::before { top: 50%; } .fila:last-child .c::before { bottom: 50%; }
+.ico { position: relative; z-index: 1; display: block; background-repeat: no-repeat; cursor: pointer; }
+.ico.circ { width: 46px; height: 46px; border-radius: 50%; }
+.ico.ch { width: 36px; height: 36px; border-radius: 50%; }
+.ico.sq { width: 44px; height: 44px; margin: auto; border-radius: 4px; }
+.ico.dia { width: 28px; height: 28px; margin: auto; border-radius: 50%; }
+.ico.max { box-shadow: 0 0 10px #f0abfc; }
+.ico.off { opacity: .55; }
+.ico:hover, .ico.sel { outline: 2px solid #fff; outline-offset: 1px; }
 .pt { position: relative; z-index: 1; font-size: .64rem; color: #fff; text-shadow: 0 0 3px #000, 0 0 3px #000; }
-.fork { position: relative; z-index: 1; display: flex; gap: 5px; }
+.fork { position: relative; z-index: 1; display: flex; gap: 4px; }
 .fork > div { display: flex; flex-direction: column; align-items: center; }
-.sq { width: 40px; height: 40px; margin: auto; border-radius: 4px; display: grid; place-items: center; background: #1e293b; border: 2px solid #475569; color: #94a3b8; font-size: .72rem; font-weight: 700; }
-.sq.on.a { background: #78350f; border-color: #fbbf24; color: #fff; box-shadow: 0 0 8px #fbbf24; }
-.sq.on.b { background: #1e3a8a; border-color: #60a5fa; color: #fff; box-shadow: 0 0 8px #60a5fa; }
+#tt { position: absolute; z-index: 50; max-width: 290px; background: #0b1220f2; border: 1px solid #64748b; border-radius: 8px; padding: .55rem .7rem; font-size: .78rem; line-height: 1.4; color: var(--txt); box-shadow: 0 6px 20px #000a; pointer-events: none; display: none; }
+#tt .tn { font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: .02em; }
+#tt .ts { color: var(--suave); font-size: .7rem; margin-bottom: .3rem; }
 .nota { color: var(--suave); font-size: .82rem; margin-top: .55rem; line-height: 1.5; }
 .nota b { color: var(--txt); }
 .fuera { color: var(--suave); font-size: .82rem; padding: .7rem 1.1rem 1rem; border-top: 1px dashed var(--borde); }
@@ -113,7 +118,7 @@ footer { max-width: 1180px; margin: 0 auto; padding: 1.5rem 1rem 3rem; color: va
 
   <h2>Cómo leer cada build</h2>
   <div class="datos">
-    <div class="dato"><b>Árbol general</b>Dibujado como en el juego: columna de 18 rasgos (máx. 5 puntos) con las ramas a la derecha (dorada y azul) y 3 bifurcaciones de elección. Pasa el ratón para ver cada nombre. 18 rasgos (máx. 5 puntos) + 3 elecciones (1 punto; eliges uno de los dos). Están numerados de arriba abajo, igual en todos los héroes.</div>
+    <div class="dato"><b>Árbol general</b>Dibujado como en el juego: columna de 18 rasgos (máx. 5 puntos) con las ramas a la derecha (dorada y azul) y 3 bifurcaciones de elección. Iconos sacados del juego: pasa el ratón o toca cada uno para ver su nombre y qué hace. 18 rasgos (máx. 5 puntos) + 3 elecciones (1 punto; eliges uno de los dos). Están numerados de arriba abajo, igual en todos los héroes.</div>
     <div class="dato"><b>Ramas de habilidad</b>Al lado de algunos rasgos generales hay dos ramas (una por cada estilo del héroe). Se indican por el rasgo general al que van unidas.</div>
     <div class="dato"><b>Total</b>Todas las builds gastan los <b>62 puntos</b> (la pantalla marca «Puntos asignables: 0»). Las especializaciones de habilidad no gastan puntos.</div>
     <div class="dato"><b>Equipo</b>Todo Legendario +10, nivel 60. Cada efecto lleva su calidad: <span class="g gS" style="display:inline-block">S</span> <span class="g gA" style="display:inline-block">A</span> <span class="g gB" style="display:inline-block">B</span> <span class="g gC" style="display:inline-block">C</span> <span class="g gD" style="display:inline-block">D</span>. «Refinar» = la línea que hay que mejorar.</div>
@@ -153,7 +158,7 @@ footer { max-width: 1180px; margin: 0 auto; padding: 1.5rem 1rem 3rem; color: va
 // Árbol general (igual en todos los héroes). Índices 0..17 = rasgos 1..18.
 const NODOS = ['Bonificación de daño (+10 %/punto)', 'Vida (corazón)', 'Amplificación de salida (corona)', 'Armadura (hexágono)', 'Daño crítico (rayo)', 'Escudo (no visible)',
   'Corazón (no visible)', 'Tasa de golpe crítico (+3 %/punto)', 'Escudo (no visible)', 'Corona (no visible)', 'Esquiva (antifaz)', 'Bota (no visible)',
-  'Daño de precisión (flecha)', 'Hexágono (no visible)', 'Flecha doble (no visible)', 'Antifaz (no visible)', 'Carga de definitiva / rasgo roto', 'Escudo (no visible)'];
+  'Daño de precisión (flecha)', 'Hexágono (no visible)', 'Flecha doble (no visible)', 'Antifaz (no visible)', 'Ultimate Boost (carga de la definitiva)', 'Escudo (no visible)'];
 // Elecciones: A tras el rasgo 6, B tras el 11, C tras el 18
 const ELEC = { A: ['Vel. de ataque principal +40 %', 'Reducción de enfriamiento −40 %'], B: ['Daño principal +50 %', 'Daño de habilidad +50 %'], C: ['Multiplicador de daño crítico', 'Multiplicador de daño de precisión'] };
 const FILAS = [2, 4, 6, 7, 9, 11, 12, 14, 16, 18]; // rasgos generales con rama al lado
@@ -162,7 +167,7 @@ const H = [
  { id: 'thor', n: 'Thor', rol: 'Vanguard', c: '#38bdf8', ramas: ['Storm Surge (dorada)', 'Rune Awakening (azul)'], builds: [
   { nombre: 'Rune Awakening «rayo»', tipo: 'Principal',
     prueba: [['ok', 'Solitario (1 jugador en el marcador)'], ['ok', 'Partida en Pesadilla 300 en pantalla']],
-    gen: [5,1,5,1,5,1, 1,5,1,5,1,1, 4,1,1,1,1,1], elec: { A: 0, B: 1, C: 0 },
+    sp: 'thorR', gen: [5,1,5,1,5,1, 1,5,1,5,1,1, 4,1,1,1,1,1], elec: { A: 0, B: 1, C: 0 },
     rama: [[0,3,'',3,3,'Enchanted Flurry'],[0,3,'',3,3,'Immortal Rune'],[0,3,'',0,3,'Rolling Thunder'],[0,1,'',1,1,'Endless Current'],[0,3,'',3,3,'Lightning Domain'],[0,3,'',3,3,'no visible'],[0,1,'',1,1,'no visible'],[0,3,'',3,3,'no visible'],[0,3,'',0,3,'Ultimate Storm'],[0,1,'',1,1,'no visible']],
     equipo: [
       ['Arma', 'Gaea Sigil', 'Durante la runa, daño del proyectil de Mjolnir Bash +30000', [['S','Bonificación de daño total +831 %'],['A','Daño crítico +984 %'],['S','+1245 % contra jefes'],['B','Tasa de golpe crítico +17 %',1],['S','High-Voltage Field +2313 %']]],
@@ -175,7 +180,7 @@ const H = [
     videos: [['NugnugTV · N300 en solitario (23-jul) · árbol 0:51–1:00, equipo 10:05–11:31', 'https://www.youtube.com/watch?v=h5ExXw6Icf0'], ['axelerator · N300 en solitario (23-jul) · build 3:41–3:45', 'https://www.youtube.com/watch?v=N_J5THue-X0']] },
   { nombre: 'Storm Surge', tipo: 'Alternativa',
     prueba: [['ok', 'Solitario (1 jugador en el marcador)'], ['medio', 'Partida en pantalla: Pesadilla 260 (el 300 lo dice él)']],
-    gen: [2,1,5,1,5,1, 1,5,1,5,1,1, 1,1,1,1,1,1], elec: { A: 0, B: 1, C: 0 },
+    sp: 'thorS', gen: [2,1,5,1,5,1, 1,5,1,5,1,1, 1,1,1,1,1,1], elec: { A: 0, B: 1, C: 0 },
     rama: [[3,3,'no visible',0,3,''],[3,3,'no visible',0,3,''],[3,3,'no visible',0,3,''],[1,1,'no visible',0,1,''],[3,3,'no visible',0,3,''],[3,3,'no visible',0,3,''],[1,1,'no visible',0,1,''],[3,3,'no visible',0,3,''],[3,3,'no visible',0,3,''],[1,1,'no visible',0,1,'']],
     equipo: [
       ['Arma', 'Elderwood Haft', 'Daño base de Storm Surge +11250', [['S','Bonificación de daño total +831 %'],['S','Surprise Strike +597 %'],['S','Daño crítico +1248 %'],['S','Tasa de golpe crítico +24,3 %'],['S','+1245 % contra enemigos cercanos']]],
@@ -190,7 +195,7 @@ const H = [
  { id: 'squirrel-girl', n: 'Squirrel Girl', rol: 'Duelist', c: '#f97316', ramas: ['Bellotas (dorada)', 'Ardillas (azul)'], builds: [
   { nombre: 'Precisión en solitario', tipo: 'Principal',
     prueba: [['ok', 'Solitario (1 jugador en el marcador)'], ['medio', 'Partida en pantalla: Pesadilla 260; el 300 (top 40, ~6 min) en la clasificación']],
-    gen: [5,1,5,1,1,1, 1,1,1,3,1,1, 5,1,5,1,1,1], elec: { A: 1, B: 1, C: 1 },
+    sp: 'sg', gen: [5,1,5,1,1,1, 1,1,1,3,1,1, 5,1,5,1,1,1], elec: { A: 1, B: 1, C: 1 },
     rama: [[3,3,'no visible',3,3,'no visible'],[3,3,'no visible',1,3,'no visible'],[3,3,'no visible',3,3,'Rodent Plague'],[1,1,'no visible',1,1,'Offense is Defense'],[1,3,'no visible',0,3,''],[3,3,'no visible',0,3,''],[1,1,'no visible',0,1,''],[0,3,'',0,3,''],[0,3,'',0,3,''],[0,1,'',0,1,'']],
     equipo: [
       ['Arma', 'Tirachinas de Fresno', 'Daño de Bellota explosiva +1258', [['S','Bonificación de daño total +831 %'],['S','Mejora de Bellota gigante +348 % (vulnerabilidad)'],['S','Daño de precisión +2913 %'],['S','Tasa de precisión +9,3 %'],['S','Impulso de salida total +831 %']]],
@@ -205,7 +210,7 @@ const H = [
  { id: 'moon-knight', n: 'Moon Knight', rol: 'Duelist', c: '#e2e8f0', ramas: ['Puño / melee (dorada)', 'Ankh / Lunar Glide (azul)'], builds: [
   { nombre: 'Lunar Glide', tipo: 'Principal',
     prueba: [['ok', 'Solitario (1 jugador en el marcador)'], ['medio', 'Partida en pantalla: Pesadilla 260; perfil «Highest Difficulty Cleared: NIGHTMARE 300»']],
-    gen: [5,1,5,1,5,1, 1,5,1,5,1,1, 5,1,3,1,1,1], elec: { A: 1, B: 0, C: 0 },
+    sp: 'mkL', gen: [5,1,5,1,5,1, 1,5,1,5,1,1, 5,1,3,1,1,1], elec: { A: 1, B: 0, C: 0 },
     rama: [[0,3,'',3,3,'no visible'],[0,3,'',3,3,'no visible'],[0,3,'',0,3,''],[0,1,'',0,1,''],[1,3,'Fist of Khonshu',0,3,''],[1,3,"Moon God's Chosen",3,3,'no visible'],[0,1,'',1,1,'no visible'],[0,3,'',0,3,''],[0,3,'',3,3,'Lunar Glide'],[0,1,'',0,1,'']],
     equipo: [
       ['Arma', 'Scepter of Rites', 'Crescent Dart +180 · Moonblade +266', [['S','Bonificación de daño total +831 %'],['S','Impulso de salida total +831 %'],['S','+1246 % contra jefes'],['A','Tasa de golpe crítico +19,1 %'],['C','Lunar Glide −0,32 s',1]]],
@@ -218,7 +223,7 @@ const H = [
     videos: [['NugnugTV · solitario (26-jul) · árbol 4:42–4:51, equipo 7:47–8:56', 'https://www.youtube.com/watch?v=6SVhaMivJD8']] },
   { nombre: 'Melee (Uru Knuckles)', tipo: 'Alternativa',
     prueba: [['medio', 'Probable solitario (sin compañeros en el HUD; no se ve el marcador)'], ['medio', 'Partida en pantalla: Pesadilla 270; puesto 65 de Moon Knight']],
-    gen: [5,1,3,1,4,1, 1,5,1,3,1,1, 1,1,1,1,5,1], elec: { A: 1, B: 1, C: 0 },
+    sp: 'mkM', gen: [5,1,3,1,4,1, 1,5,1,3,1,1, 1,1,1,1,5,1], elec: { A: 1, B: 1, C: 0 },
     rama: [[3,3,'no visible',0,3,''],[3,3,'Full Moon Spin',0,3,''],[3,3,'no visible',0,3,''],[1,1,'no visible',0,1,''],[1,3,'Fist of Khonshu',0,3,''],[3,3,"Moon God's Chosen",0,3,''],[1,1,'no visible',0,1,''],[3,3,'Overlapping Shadows',0,3,''],[3,3,'no visible',0,3,''],[1,1,'no visible',0,1,'']],
     equipo: [
       ['Arma', 'Uru Knuckles', 'Eclipse Explosion +450 · mejorada +5992', [['S','Bonificación de daño total +831 %'],['S','+1245 % a corta distancia'],['A','Daño crítico +1071 %'],['A','Tasa de golpe crítico +18,4 %'],['S','Avatar of the Moon God +9 %']]],
@@ -233,8 +238,8 @@ const H = [
  { id: 'the-punisher', n: 'The Punisher', rol: 'Duelist', c: '#a3a3a3', ramas: ['Rifle (dorada)', 'Escopeta (azul)'], builds: [
   { nombre: 'Escopeta', tipo: 'Principal',
     prueba: [['ok', 'Solitario (1 jugador en el marcador)'], ['medio', 'Partida en pantalla: Pesadilla 260']],
-    gen: [5,1,5,1,5,1, 1,5,1,5,1,1, 5,1,1,2,1,1], elec: { A: 0, B: 0, C: 0 },
-    rama: [[0,3,'',3,3,'no visible'],[0,3,'',3,3,'no visible'],[0,3,'',3,3,'no visible'],[0,1,'',1,1,'no visible'],[0,3,'',1,3,'no visible'],[0,3,'',3,3,'no visible'],[0,1,'',1,1,'no visible'],[0,3,'',0,3,'Chain Reaction'],[0,3,'',0,3,'High-Energy Explosive (bloqueado)'],[0,1,'',1,1,'no visible']],
+    sp: 'pun', gen: [5,1,5,1,5,1, 1,5,1,5,1,1, 5,1,1,2,1,1], elec: { A: 0, B: 0, C: 0 },
+    rama: [[0,3,'',3,3,'no visible'],[0,3,'',3,3,'no visible'],[0,3,'',3,3,'no visible'],[0,1,'',1,1,'no visible'],[0,3,'',1,3,'no visible'],[0,3,'',3,3,'no visible'],[0,1,'',1,1,'no visible'],[0,3,'',0,3,'Chain Reaction'],[0,3,'',0,3,'High-Energy Explosive (bloqueado)'],[0,1,'',1,1,'Rhythm of Ruin']],
     equipo: [
       ['Arma', 'Marauder Shotgun', 'Deliverance +402 de daño por bala', [['S','Bonificación de daño total +831 %'],['S','Hail of Bullets +24'],['S','Daño crítico +1248 %'],['B','Tasa de golpe crítico +16,8 %',1],['S','+1245 % contra jefes']]],
       ['Armadura', 'Armadura Rúnica (+8)', 'Salud +3387 · Valor de armadura +613', [['A','Salud +1596'],['A','Salud restaurada al derrotar a un enemigo +62',1],['B','Valor de armadura +459',1],['S','Salud +150 %'],['A','Ranuras de carga de Runa de curación +3']]],
@@ -248,8 +253,8 @@ const H = [
  { id: 'blade', n: 'Blade', rol: 'Duelist', c: '#dc2626', ramas: ['Espada', 'Pistola'], builds: [
   { nombre: 'Definitiva', tipo: 'Principal',
     prueba: [['medio', 'Probable solitario (sin compañeros en el HUD)'], ['ok', 'Victoria en Pesadilla 300 en pantalla']],
-    gen: [5,1,5,1,1,1, 1,4,1,5,1,1, 5,1,4,1,5,1], elec: { A: 0, B: 1, C: 1 },
-    rama: [[1,3,'Swift Edge',0,3,''],[0,3,'',0,3,''],[3,3,'Unfazed',0,3,''],[1,1,'Swift Severance',0,1,''],[0,3,'',0,3,''],[3,3,'no visible',0,3,''],[1,1,'Sustained by Battle',0,1,'bloqueado'],[3,3,'no visible',0,3,''],[3,3,'Feast of the Hunt',0,3,''],[0,1,"Hunter's Aura",0,1,'']],
+    sp: 'blade', gen: [5,1,5,1,1,1, 1,4,1,5,1,1, 5,1,4,1,5,1], elec: { A: 0, B: 1, C: 1 },
+    rama: [[1,3,'Swift Edge',0,3,''],[0,3,'',0,3,''],[3,3,'Unfazed',0,3,'Warm-Up'],[1,1,'Swift Severance',0,1,''],[0,3,'Honed Edge',0,3,''],[3,3,'no visible',0,3,''],[1,1,'Sustained by Battle',0,1,'bloqueado'],[3,3,'Synergy of Swords',0,3,''],[3,3,'Feast of the Hunt',0,3,"Hunter's Resolve"],[0,1,"Hunter's Aura",0,1,'']],
     equipo: [
       ['Arma', 'Stakes of Yggdrasill', 'Tajo de la espada +1635', [['S','Bonificación de daño total +831 %'],['S','Unfazed +21 tajos / +0,41'],['S','+1245 % a corta distancia'],['S','Tasa de precisión +9,3 %'],['S','Feast of the Hunt +40 %']]],
       ['Armadura', 'Armadura Rúnica', 'No la abre en el vídeo', [['','Usa la misma de los demás: Valor de armadura, Salud restaurada al derrotar, Salud, Salud %, Runa de curación']]],
@@ -263,7 +268,7 @@ const H = [
  { id: 'jeff-the-land-shark', n: 'Jeff the Land Shark', rol: 'Strategist', c: '#60a5fa', ramas: ['Aleta', 'Otra rama'], builds: [
   { nombre: 'Embestida (Hide and Seek)', tipo: 'Principal',
     prueba: [['ok', 'Solitario (3 huecos vacíos en la selección)'], ['medio', 'Partida en pantalla: Pesadilla 260; el 300 en solitario en la clasificación (puesto 14, 10:36)']],
-    gen: [5,1,5,1,5,1, 1,5,1,5,1,1, 1,1,1,1,3,1], elec: { A: 1, B: 1, C: 0 },
+    sp: 'jeff', gen: [5,1,5,1,5,1, 1,5,1,5,1,1, 1,1,1,1,3,1], elec: { A: 1, B: 1, C: 0 },
     rama: [[1,3,'no visible',0,3,''],[3,3,'no visible',0,3,''],[3,3,'no visible',0,3,''],[1,1,'no visible',0,1,''],[3,3,'no visible',0,3,''],[3,3,'no visible',0,3,''],[1,1,'no visible',0,1,''],[1,3,'no visible',0,3,''],[3,3,'no visible',0,3,'bloqueado'],[0,1,'',0,1,'']],
     equipo: [
       ['Arma', 'Deep-Sea Propeller', 'Daño base de la embestida +1500', [['S','Bonificación de daño total +831 %'],['S','Forward Frenzy +597 %'],['S','Daño crítico +1248 %'],['A','Tasa de golpe crítico +19,8 %'],['C','Hangry +27 de carga de definitiva',1]]],
@@ -277,22 +282,56 @@ const H = [
  ]},
 ];
 
-// Iconos aproximados del cliente (rasgos 1..18)
-const ICON = ['✸', '♥', '♛', '⬢', 'ϟ', '⛨', '♥', '✦', '⛨', '♛', '◐', '⮟', '➶', '⬢', '⇶', '◐', '✪', '⛨'];
-const ELIC = { A: ['»', '⟳'], B: ['✹', '✺'], C: ['ϟ', '◎'] };
+// Iconos recortados de los vídeos: un sprite por build (img/arbol/<sp>.webp), 62 casillas de 56 px
+const NSP = 62;
+const POS = { gen: i => i, el: (L, j) => 18 + 'ABC'.indexOf(L) * 2 + j, rama: (k, c) => 24 + k * 2 + c, dia: n => 43 + n };
+const DIA = { thorR: [6, 9, 12, 18], thorS: [6, 9, 12, 18], sg: [4, 9, 18], mkL: [4, 18], mkM: [4, 18], pun: [4, 9, 12, 18], blade: [4, 18], jeff: [6, 9, 12, 18] };
+// Textos del juego (tooltips) vistos en los vídeos, traducidos. Los generales y las elecciones son iguales en todos los héroes.
+const TT_GEN = {
+  0: ['Damage Bonus', 'Bonificación de daño total +10 % por punto (2/5 = +20 %; siguiente nivel +30 %).'],
+  2: ['Output Amplification', 'A 5/5: aumento de salida total +75 %.'],
+  4: ['Critical Damage', 'A 1/5: daño crítico +30 % (siguiente nivel +60 %).'],
+  16: ['Ultimate Boost', 'A 5/5: velocidad de carga de la definitiva +150 %.'] };
+const TT_EL = {
+  A: [['Primary ATK Speed', 'Velocidad de ataque del arma principal +40 %.', 1], ['Cooldown Reduction', 'Enfriamiento de habilidades −40 %.']],
+  B: [['Primary DMG Bonus', 'Daño del arma principal +50 %.'], ['Ability DMG Bonus', 'Daño de habilidad +50 %.', 1]],
+  C: [['Critical Damage Multiplier', 'Daño crítico ×150 %.'], ['Precision Damage Multiplier', 'Multiplicador del daño de precisión.', 1]] };
+const TT_RAMA = {
+  thor: { r02b: 'Durante la Runa del Despertar, velocidad de ataque de Mjolnir Bash +20 % por punto.' },
+  punisher: { r14b: 'Matar a un enemigo con Deliverance provoca una explosión de 4 de daño; si esa explosión mata, provoca otra.',
+    r16b: 'Las explosiones de Chain Reaction heredan el 50 % de las mejoras de bala de Deliverance. Se desbloquea subiendo los rasgos anteriores.',
+    r18b: 'Cada disparo de Deliverance reduce 0,04 s el intervalo del siguiente (hasta 5 acumulaciones).' },
+  blade: { r02a: 'Velocidad de ataque de Ancestral Sword +20 % por punto (1/3 = +20 %, 2/3 = +40 %).',
+    r06a: 'A 3/3: tras golpear con Daywalker Dash, 27 tajos giratorios extra; cada uno da +47 % de daño durante 3 s (acumulable).',
+    r06b: 'Con Hunter’s Shotgun, cada impacto sube el daño de la bala en 1.',
+    r09a: 'El daño de Daywalker Dash hereda el 120 % del daño de Ancestral Sword.',
+    r14a: 'A 3/3: el daño de la definitiva escala con el de Ancestral Sword (+1470 %).',
+    r16a: 'A 3/3: el tajo de la definitiva dura +3,6 s y gana +111 % de daño por cada 1 % de vida que le falte al objetivo.',
+    r16b: 'Duración de Heart of the Hunter +1 s.',
+    r18a: 'Mientras carga la definitiva, Blade lanza ondas que empujan a los enemigos cercanos.' } };
+const tts = [];
+const tip = o => { tts.push(o); return tts.length - 1; };
+const ico = (sp, k, cls, t) => `<span class="ico ${cls}" data-t="${t}" tabindex="0" style="background-image:url(img/arbol/${sp}.webp);background-size:${NSP * 100}% 100%;background-position:${k / (NSP - 1) * 100}% 0"></span>`;
+const NOVIS = 'El texto de este rasgo no sale en los vídeos.';
 function juego(h, b) {
-  const f = [];
+  const f = [], sp = b.sp, hid = h.id === 'the-punisher' ? 'punisher' : h.id;
   b.gen.forEach((p, i) => {
-    const k = FILAS.indexOf(i + 1), r = k >= 0 ? b.rama[k] : null;
-    const sq = (pt, mx, nm, c) => `<div class="sq${pt ? ' on ' + c : ''}" title="${nm || 'no visible'}">${pt}/${mx}</div>`;
-    f.push(`<div class="fila"><div class="lb">${i + 1}. ${NODOS[i]}</div><div class="c"><div class="circ${p === 5 ? ' max' : ''}" title="${NODOS[i]}">${ICON[i]}</div><span class="pt">${p}/5</span></div>${r ? sq(r[0], r[1], r[2], 'a') + sq(r[3], r[4], r[5], 'b') : '<div></div><div></div>'}</div>`);
+    const k = FILAS.indexOf(i + 1), r = k >= 0 ? b.rama[k] : null, g = TT_GEN[i];
+    const tg = tip({ n: g ? g[0] : NODOS[i], s: `Rasgo general ${i + 1} · ${p}/5`, x: g ? g[1] : NODOS[i] + '. ' + NOVIS });
+    const sq = c => {
+      const pt = r[c * 3], mx = r[c * 3 + 1], nm = r[c * 3 + 2], key = 'r' + String(i + 1).padStart(2, '0') + 'ab'[c];
+      return ico(sp, POS.rama(k, c), 'sq', tip({ n: nm && nm !== 'no visible' ? nm : 'Rasgo de habilidad', s: `${h.ramas[c]} · ${pt}/${mx}`, x: (TT_RAMA[hid] || {})[key] || NOVIS }));
+    };
+    const dia = (DIA[sp] || []).includes(i + 1) ? ico(sp, POS.dia(i + 1), 'dia', tip({ n: 'Rombo', s: 'Junto al rasgo ' + (i + 1), x: 'Icono lateral del juego; su función no sale en los vídeos.' })) : '';
+    f.push(`<div class="fila"><div class="lb">${i + 1}. ${NODOS[i]}</div><div>${dia}</div><div class="c">${ico(sp, POS.gen(i), 'circ' + (p === 5 ? ' max' : ''), tg)}<span class="pt">${p}/5</span></div>${r ? sq(0) + sq(1) : '<div></div><div></div>'}</div>`);
     const L = i === 5 ? 'A' : i === 10 ? 'B' : i === 17 ? 'C' : '';
     if (L) {
       const e = b.elec[L];
-      f.push(`<div class="fila"><div class="lb">Elección ${L}: <b>${ELEC[L][e]}</b></div><div class="c"><div class="fork">${[0, 1].map(j => `<div><div class="circ ch${j === e ? ' max' : ' off'}" title="${ELEC[L][j]}">${ELIC[L][j]}</div><span class="pt">${j === e ? 1 : 0}/1</span></div>`).join('')}</div></div><div></div><div></div></div>`);
+      const op = j => { const t = TT_EL[L][j]; return tip({ n: t[0], s: `Elección ${L} · ${j === e ? '1/1 (elegida)' : '0/1 (no)'}`, x: t[1] + ` Solo puede estar activo uno: ${t[0]} o ${TT_EL[L][1 - j][0]}.` + (t[2] ? ' (Texto deducido: en los vídeos no se pasa el ratón por él.)' : '') }); };
+      f.push(`<div class="fila"><div class="lb">Elección ${L}: <b>${ELEC[L][e]}</b></div><div></div><div class="c"><div class="fork">${[0, 1].map(j => `<div>${ico(sp, POS.el(L, j), 'ch' + (j === e ? ' max' : ' off'), op(j))}<span class="pt">${j === e ? 1 : 0}/1</span></div>`).join('')}</div></div><div></div><div></div></div>`);
     }
   });
-  return `<div class="juego"><div class="cabj"><span class="g0" style="grid-column:1/3">Rasgos generales</span><span class="g1" title="${h.ramas[0]}">${h.ramas[0].split(' (')[0]}</span><span class="g2" title="${h.ramas[1]}">${h.ramas[1].split(' (')[0]}</span></div><div>${f.join('')}</div></div>`;
+  return `<div class="juego"><div class="cabj"><span class="g0">Rasgos generales</span><span class="g1" title="${h.ramas[0]}">${h.ramas[0].split(' (')[0]}</span><span class="g2" title="${h.ramas[1]}">${h.ramas[1].split(' (')[0]}</span></div><div>${f.join('')}</div></div>`;
 }
 const linea = l => `<div class="linea">${l[0] ? `<span class="g g${l[0]}">${l[0]}</span>` : '<span class="g" style="background:transparent"></span>'}<span>${l[1]}</span>${l[2] ? '<span class="refinar">refinar</span>' : ''}</div>`;
 
@@ -333,6 +372,24 @@ document.querySelectorAll('.heroe').forEach(s => s.querySelector('.tabs').addEve
   s.querySelectorAll('.tabs button').forEach(x => x.classList.toggle('on', x === btn));
   s.querySelectorAll('.build').forEach(x => x.classList.toggle('on', x.dataset.b === btn.dataset.b));
 }));
+const tt = document.createElement('div'); tt.id = 'tt'; document.body.appendChild(tt);
+let fijo = null;
+function mostrar(el) {
+  const o = tts[el.dataset.t];
+  tt.innerHTML = `<div class="tn">${o.n}</div><div class="ts">${o.s}</div><div>${o.x}</div>`;
+  tt.style.display = 'block';
+  const r = el.getBoundingClientRect(), w = tt.offsetWidth;
+  const x = Math.max(8, Math.min(r.left + r.width / 2 - w / 2, document.documentElement.clientWidth - w - 8));
+  tt.style.left = (x + scrollX) + 'px'; tt.style.top = (r.bottom + scrollY + 8) + 'px';
+}
+function ocultar() { tt.style.display = 'none'; if (fijo) fijo.classList.remove('sel'); fijo = null; }
+document.addEventListener('mouseover', e => { const el = e.target.closest('.ico'); if (el) mostrar(el); else if (fijo) mostrar(fijo); else tt.style.display = 'none'; });
+document.addEventListener('focusin', e => { const el = e.target.closest('.ico'); if (el) mostrar(el); });
+document.addEventListener('click', e => {
+  const el = e.target.closest('.ico');
+  if (!el || el === fijo) return ocultar();
+  ocultar(); fijo = el; el.classList.add('sel'); mostrar(el);
+});
 </script>
 </body>
 </html>
