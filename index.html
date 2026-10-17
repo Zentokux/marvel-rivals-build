@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cacería Sangrienta Builds</title>
+<meta name="description" content="Marvel Rivals: builds de Cacería sangrienta (Blood Hunt) para Pesadilla 300, los 6 héroes, con fuentes y fechas.">
+<style>
+:root { --bg: #0a0708; --panel: #150e10; --borde: #3a1e24; --txt: #f1e9ea; --suave: #a8959a; --rojo: #e11d2e; --oro: #f5b942; --ok: #22c55e; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: radial-gradient(ellipse at top, #3a0b12 0%, var(--bg) 55%); color: var(--txt); font-family: -apple-system, "Segoe UI", Roboto, sans-serif; min-height: 100vh; }
+a { color: var(--oro); }
+header { text-align: center; padding: 2.4rem 1rem 1.2rem; }
+header .sub { color: var(--oro); letter-spacing: .25em; font-size: .8rem; font-weight: 700; text-transform: uppercase; }
+h1 { font-size: clamp(2.1rem, 6vw, 3.6rem); color: var(--rojo); text-shadow: 0 0 30px rgba(225, 29, 46, .5); letter-spacing: .03em; margin: .3rem 0; }
+header p { color: var(--suave); max-width: 720px; margin: 0 auto; }
+.badges { display: flex; gap: .5rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem; }
+.badge { border: 1px solid var(--borde); background: #1d1215; border-radius: 99px; padding: .3rem .8rem; font-size: .82rem; color: var(--suave); }
+.badge b { color: var(--txt); }
+.badge.oro { border-color: var(--oro); color: var(--oro); }
+main { max-width: 1150px; margin: 0 auto; padding: 0 1rem 3rem; }
+h2 { color: var(--rojo); font-size: 1.4rem; margin: 2.2rem 0 1rem; text-align: center; }
+.galeria { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .8rem; }
+.carta { position: relative; border-radius: 14px; overflow: hidden; border: 2px solid var(--borde); background: #1d1215; text-decoration: none; color: var(--txt); transition: transform .2s, border-color .2s; }
+.carta:hover { transform: translateY(-4px); border-color: var(--c); }
+.carta img { width: 100%; aspect-ratio: 181 / 256; object-fit: cover; display: block; }
+.carta .pie { position: absolute; inset: auto 0 0 0; padding: .6rem .5rem .5rem; background: linear-gradient(transparent, rgba(0, 0, 0, .92)); }
+.carta .nm { font-weight: 800; font-size: .98rem; }
+.carta .rol { font-size: .72rem; color: var(--c); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+.panel { background: var(--panel); border: 1px solid var(--borde); border-radius: 14px; padding: 1.1rem 1.2rem; }
+.datos { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: .7rem; }
+.dato { background: #1d1215; border-radius: 10px; padding: .7rem .8rem; border-left: 3px solid var(--rojo); }
+.dato b { display: block; color: var(--oro); font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; margin-bottom: .2rem; }
+table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+th, td { padding: .5rem .55rem; border-bottom: 1px solid #2a171b; text-align: left; vertical-align: top; }
+th { color: var(--oro); font-weight: 600; font-size: .82rem; text-transform: uppercase; letter-spacing: .05em; }
+.heroe { display: grid; grid-template-columns: 200px 1fr; gap: 1.2rem; background: var(--panel); border: 1px solid var(--borde); border-left: 6px solid var(--c); border-radius: 14px; padding: 1.1rem; margin-bottom: 1.2rem; scroll-margin-top: 1rem; }
+.heroe .foto img { width: 100%; border-radius: 12px; display: block; }
+.heroe h3 { font-size: 1.5rem; }
+.heroe .rol { color: var(--c); font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; }
+.heroe .resumen { color: var(--suave); margin: .3rem 0 .8rem; }
+.etq { display: inline-block; font-size: .72rem; padding: .1rem .5rem; border-radius: 99px; border: 1px solid var(--c); color: var(--c); margin-right: .3rem; font-weight: 700; }
+.op { font-weight: 700; color: #fff; }
+.videos { margin-top: .7rem; font-size: .82rem; color: var(--suave); }
+.nota { color: var(--suave); font-size: .82rem; margin-top: .6rem; }
+.aviso { border-left-color: var(--oro); }
+footer { max-width: 1150px; margin: 0 auto; padding: 1.5rem 1rem 3rem; color: var(--suave); font-size: .8rem; line-height: 1.6; }
+@media (max-width: 720px) {
+  .heroe { grid-template-columns: 1fr; }
+  .heroe .foto { max-width: 170px; }
+  th, td { padding: .45rem .35rem; font-size: .84rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="sub">Marvel Rivals · Temporada 10.5</div>
+  <h1>Cacería Sangrienta</h1>
+  <p>Builds para llegar a <b>Pesadilla piso 300</b> con cada uno de los 6 héroes del modo (Blood Hunt). Solo builds probadas en el piso 300.</p>
+  <div class="badges">
+    <span class="badge oro">Actualizado 16-oct-2026</span>
+    <span class="badge">Máximo: <b>Pesadilla 300</b></span>
+    <span class="badge">Fin probable: <b>13-nov</b></span>
+  </div>
+</header>
+
+<main>
+  <h2>Elige tu héroe</h2>
+  <div class="galeria" id="galeria"></div>
+
+  <h2>El modo</h2>
+  <div class="datos">
+    <div class="dato"><b>Qué es</b>PvE cooperativo de 1 a 4 jugadores contra vampiros y Drácula.</div>
+    <div class="dato"><b>Máximo nivel</b>Pesadilla piso 300: 4 oleadas + jefe por piso; 2 jefes en los pisos 20, 40, 80, 100…300.</div>
+    <div class="dato"><b>Requisito</b>Desde el piso 71: héroe nivel 60 y equipo nivel 60.</div>
+    <div class="dato"><b>Recompensa</b>Pasar el piso 260 con cada héroe: <b style="display:inline;color:var(--txt)">100 Units</b> (una vez por héroe, 600 en total).</div>
+    <div class="dato aviso"><b>Hasta cuándo</b>Probablemente hasta el 13-nov-2026 (fin de la 10.5). Sin anuncio oficial: mira el contador del juego.</div>
+    <div class="dato"><b>Cambios recientes</b>Desde el 23-jul no cambió nada del modo; el 15-oct se arregló Aqua Burst de Jeff con el rasgo Reservoir.</div>
+  </div>
+
+  <h2>Reglas para todos</h2>
+  <div class="panel">
+    <table>
+      <tr><th>Pieza</th><th>Qué poner</th></tr>
+      <tr><td>Arma y accesorio</td><td class="op">Total Damage Bonus (se refina en la ranura 1 del arma y la 4 del accesorio; el exclusivo no puede tenerlo)</td></tr>
+      <tr><td>Stats ofensivas</td><td>Crítico <b>o</b> precisión, según lo que traiga tu equipo</td></tr>
+      <tr><td>Armadura</td><td>Armor value, Health %, Health, Health restored, Healing Rune CD</td></tr>
+      <tr><td>Orden de mejora</td><td>Primero el <b>arma</b></td></tr>
+      <tr><td>Cartas Arcana</td><td class="op">Indomitable + Iron Body (salvo Squirrel Girl)</td></tr>
+      <tr><td>Equipo sobrante</td><td>Reciclar a Uru Shards y forjar la ranura que falte</td></tr>
+    </table>
+  </div>
+
+  <h2>Builds por héroe</h2>
+  <div id="heroes"></div>
+</main>
+
+<footer id="fuentes">
+  <b>Fuentes (con fecha):</b><br>
+  · Notas oficiales: <a href="https://www.marvelrivals.com/gameupdate/20261014/41548_1316588.html" target="_blank">20261015</a> (14-oct-2026, arreglo de Jeff), <a href="https://www.marvelrivals.com/gameupdate/20261006/41548_1315865.html" target="_blank">Temporada 10.5</a> (6-oct-2026, sin cambios en el modo), <a href="https://www.marvelrivals.com/20260722/41525_1308589.html" target="_blank">20260723</a> (22-jul-2026, piso 300 y recompensa del 260).<br>
+  · <a href="https://marvelrivals.fandom.com/wiki/Blood_Hunt" target="_blank">Wiki de Fandom</a> (editada el 10-oct-2026; también los retratos) y <a href="https://marvelrivals.gg/marvel-rivals-season-10-5-roadmap/" target="_blank">hoja de ruta de la 10.5</a> (7-oct-2026).<br>
+  · Builds: vídeos con partida en el piso 300 de jul–ago 2026 (NugnugTV, HobbyAmi, Jeluuuu), vigentes porque las notas oficiales hasta el 15-oct no cambian el modo. Enlaces en cada héroe.<br>
+  · Nombres de rasgos en inglés (de los vídeos): falta confirmar cómo aparecen en el cliente en español.
+</footer>
+
+<script>
+const H = [
+  { id: 'thor', n: 'Thor', rol: 'Vanguard', c: '#38bdf8',
+    resumen: 'El más cómodo: hace el 300 en solitario con las dos builds.',
+    filas: [
+      ['Árbol', 'Rune Awakening «rayo»', 'Storm Surge'],
+      ['Exclusivo / piezas', 'Lightning Domain (S), Rune Onslaught, High-Speed Shock / High Voltage', '1 Surprise Strike (S), 2 Thunder Torrent, 1 Rising Thunder, Divine Stride o Aegis of Thunder'],
+      ['Puntos', '3 en Immortal Rune Awakening', '—'],
+      ['Stats', 'Crítico + Total Damage + daño a jefes', 'Crítico + Total Damage'],
+    ],
+    nota: 'Rune Awakening hizo el 300 tres veces seguidas en solitario. Storm Surge pega más a los jefes y es la más fácil en solitario hasta el 260.',
+    videos: [['NugnugTV · Rune Awakening N300 (23-jul)', 'https://www.youtube.com/watch?v=h5ExXw6Icf0'], ['NugnugTV · Storm Surge (3-ago)', 'https://www.youtube.com/watch?v=Gl5qE24dPZg'], ['HobbyAmi · N300 solo (18-ago)', 'https://www.youtube.com/shorts/uVUb2rOSm7E']] },
+  { id: 'squirrel-girl', n: 'Squirrel Girl', rol: 'Duelist', c: '#f97316',
+    resumen: 'La que más sube el daño del equipo en grupo.',
+    filas: [
+      ['Árbol', 'Bellotas / Acorn Rain con CD de habilidad', '—'],
+      ['Obligatorio', 'Acorn Rain (A/S) y Rhythm of Nature', '—'],
+      ['Piezas', '<span class="etq">Solo</span>2 Bursting Acorn + 1 Jumbo Acorn', '<span class="etq">Grupo</span>2 Jumbo Acorn + 1 Bursting Acorn (sube ~700 % el daño del equipo)'],
+      ['Arcana', 'Lethal Strike, Deep Freeze, Chain Lightning, Boss Hunter', '—'],
+    ],
+    nota: 'Es la única que no lleva Indomitable + Iron Body.',
+    videos: [['NugnugTV · Squirrel Girl (27-jul)', 'https://www.youtube.com/watch?v=zEd1_eXVgoE'], ['Jeluuuu · Pesadilla 300 en español (8-ago)', 'https://www.youtube.com/watch?v=sC0YpHpTcBw']] },
+  { id: 'moon-knight', n: 'Moon Knight', rol: 'Duelist', c: '#e2e8f0',
+    resumen: 'Limpia oleadas muy rápido; sufre contra los jefes.',
+    filas: [
+      ['Árbol', 'Melee', 'Lunar Glide (detalle sin confirmar)'],
+      ['Piezas', 'Avatar of the Moon God (1–2), Full Moon Spin (S), Fist of Khonshu', '—'],
+    ],
+    nota: 'Muy buena contra oleadas, floja contra jefes.',
+    videos: [['NugnugTV · Melee (6-ago)', 'https://www.youtube.com/watch?v=IVVrnFjfH_M'], ['NugnugTV · Lunar Glide (26-jul)', 'https://www.youtube.com/watch?v=6SVhaMivJD8']] },
+  { id: 'the-punisher', n: 'The Punisher', rol: 'Duelist', c: '#a3a3a3',
+    resumen: 'El mejor contra jefes con escopeta.',
+    filas: [
+      ['Árbol', 'Escopeta (Sweeper)', '<span class="etq">Grupo</span>Rifle (Barrager)'],
+      ['Piezas', 'Hail of Bullets en las 3 piezas', '3 Multi-Trajectory + Fatal Pursuit + High-Speed Rifling'],
+      ['Exclusivo', 'Chain Fire', '—'],
+    ],
+    nota: 'La escopeta hace el 300 en solitario; el rifle solo vale en grupo.',
+    videos: [['NugnugTV · Escopeta en solitario (28-jul)', 'https://www.youtube.com/watch?v=VXojxq9OQ3o'], ['NugnugTV · Rifle (24-jul)', 'https://www.youtube.com/watch?v=9LTCBxvz3bM']] },
+  { id: 'blade', n: 'Blade', rol: 'Duelist', c: '#dc2626',
+    resumen: 'Gira alrededor de la definitiva.',
+    filas: [
+      ['Árbol', 'Definitiva', '«Immortal Sword» melee'],
+      ['Piezas', '3 Feast of the Hunt, 1 Synergy of Swords, 1 Blade Shadows', '2–3 Unfazed, Swift Edge, Honed Edge'],
+      ['Puntos', '5 en carga de definitiva', '—'],
+      ['Arcana', 'Final Prey', '—'],
+    ],
+    nota: 'La melee no llega al tiempo límite contra los jefes del 300.',
+    videos: [['NugnugTV · Definitiva (25-jul)', 'https://www.youtube.com/watch?v=xtcFMMraHxg'], ['NugnugTV · Immortal Sword (30-jul)', 'https://www.youtube.com/watch?v=PsHs3Pb9Jns']] },
+  { id: 'jeff-the-land-shark', n: 'Jeff the Land Shark', rol: 'Strategist', c: '#60a5fa',
+    resumen: 'El más difícil de llevar al 300.',
+    filas: [
+      ['Árbol', 'Embestida (Hide and Seek)', '—'],
+      ['Piezas', 'Forward Frenzy en cada pieza', '—'],
+      ['Exclusivo', 'Unsharkstoppable', '—'],
+      ['Stats y Arcana', 'Crítico + daño a corta distancia; Arcana defensivas', '—'],
+    ],
+    nota: 'Arreglo del 15-oct: con el rasgo Reservoir ya crece bien el radio de Aqua Burst.',
+    videos: [['NugnugTV · Jeff (29-jul)', 'https://www.youtube.com/watch?v=4g6TWubYMTI']] },
+];
+
+document.getElementById('galeria').innerHTML = H.map(h => `
+  <a class="carta" href="#${h.id}" style="--c:${h.c}">
+    <img src="img/${h.id}.png" alt="${h.n}" width="181" height="256" loading="lazy">
+    <div class="pie"><div class="rol">${h.rol}</div><div class="nm">${h.n}</div></div>
+  </a>`).join('');
+
+document.getElementById('heroes').innerHTML = H.map(h => `
+  <section class="heroe" id="${h.id}" style="--c:${h.c}">
+    <div class="foto"><img src="img/${h.id}.png" alt="${h.n}" width="181" height="256" loading="lazy"></div>
+    <div>
+      <div class="rol">${h.rol}</div>
+      <h3>${h.n}</h3>
+      <p class="resumen">${h.resumen}</p>
+      <table>
+        <tr><th></th><th>1.ª opción</th><th>Alternativa</th></tr>
+        ${h.filas.map(f => `<tr><td>${f[0]}</td><td class="op">${f[1]}</td><td>${f[2]}</td></tr>`).join('')}
+      </table>
+      <p class="nota">${h.nota}</p>
+      <div class="videos">Prueba en vídeo: ${h.videos.map(v => `<a href="${v[1]}" target="_blank" rel="noopener">${v[0]}</a>`).join(' · ')}</div>
+    </div>
+  </section>`).join('');
+</script>
+</body>
+</html>
